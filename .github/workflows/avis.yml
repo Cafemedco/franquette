@@ -1,0 +1,44 @@
+# Met à jour les avis clients du site depuis la page Uniiti du restaurant,
+# toutes les heures. Ne commite que si la note, le nombre ou les avis ont changé.
+name: Avis Uniiti
+
+on:
+  schedule:
+    - cron: "17 * * * *"      # toutes les heures, à h+17
+  workflow_dispatch:           # bouton « Run workflow » pour forcer une mise à jour
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: avis-uniiti
+  cancel-in-progress: false
+
+jobs:
+  mise-a-jour:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lire les avis Uniiti
+        run: python3 scripts/avis_uniiti.py
+
+      - name: Publier s'ils ont changé
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/avis.json; then
+            echo "Rien de nouveau."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/avis.json
+          git commit -m "Avis Uniiti : mise à jour automatique"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
+          # Un push fait par ce jeton ne relance pas toujours GitHub Pages : on le demande.
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null \
+            && echo "Reconstruction du site demandée." \
+            || echo "Pages non relancé automatiquement (le site se mettra à jour au prochain push)."

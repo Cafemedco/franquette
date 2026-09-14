@@ -53,7 +53,10 @@
     document.querySelectorAll('a[href*="instagram.com"]').forEach((a) => { a.href = site.liens.instagram; });
     document.querySelectorAll('a[href*="facebook.com"]').forEach((a) => { a.href = site.liens.facebook; });
     document.querySelectorAll('[data-bind-html]').forEach((el) => {
-      const val = el.getAttribute('data-bind-html').split('.').reduce((o, k) => (o ? o[k] : null), site);
+      const lire = (chemin) => chemin.split('.').reduce((o, k) => (o ? o[k] : null), site);
+      const chemin = el.getAttribute('data-bind-html');
+      // Les pages DE/NL/IT demandent leur langue (cafe_de…) et retombent sur l'anglais sinon.
+      const val = lire(chemin) || lire(chemin.replace(/_(de|nl|it)$/, '_en'));
       if (val) el.innerHTML = val;
     });
 
@@ -116,7 +119,9 @@
       avisGrid.innerHTML = (data.avis || []).map((a) =>
         '<div class="avis-card"><div class="avis-etoiles">' + '★'.repeat(a.note) + '</div>' +
         '<p>&laquo;&nbsp;' + esc(L(a, 'texte')) + '&nbsp;&raquo;</p>' +
-        '<p class="avis-auteur">' + esc(a.auteur) + '</p></div>'
+        '<p class="avis-auteur">' + esc(a.auteur) +
+        (a.date ? ' &middot; ' + esc(new Date(a.date).toLocaleDateString(LANG, { day: 'numeric', month: 'long', year: 'numeric' })) : '') +
+        '</p></div>'
       ).join('');
     }).catch(() => {});
   }

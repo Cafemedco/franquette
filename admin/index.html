@@ -115,7 +115,11 @@
         <div><label>Horaires café (EN)</label><textarea id="s-cafe_en"></textarea></div>
         <div><label>Horaires restaurant (FR)</label><textarea id="s-restaurant_fr"></textarea></div>
         <div><label>Horaires restaurant (EN)</label><textarea id="s-restaurant_en"></textarea></div>
+        <div><label>Horaires café (DE)</label><textarea id="s-cafe_de"></textarea></div>
+        <div><label>Horaires café (NL)</label><textarea id="s-cafe_nl"></textarea></div>
+        <div><label>Horaires café (IT)</label><textarea id="s-cafe_it"></textarea></div>
       </div>
+      <p class="hint">Laissez un champ DE/NL/IT vide pour afficher la version anglaise sur la page correspondante.</p>
       <p class="hint">Astuce&nbsp;: <code>&lt;br&gt;</code> fait un saut de ligne.</p>
       <div class="grid2">
         <div><label>Lien réservation restaurant</label><input type="url" id="s-reservation"></div>
@@ -223,27 +227,9 @@
     <!-- ---- Avis ---- -->
     <div class="card tab-pane hidden" id="pane-avis">
       <h3>Avis clients</h3>
-      <p class="hint" style="margin-top:0.6rem;">Copiez-collez ici de vrais avis depuis votre fiche Google Maps &mdash; le site n&rsquo;affiche jamais d&rsquo;avis inventés.</p>
-      <div class="grid2">
-        <div><label>Note moyenne (sur 5)</label><input type="number" step="0.1" min="0" max="5" id="v-note"></div>
-        <div><label>Nombre d&rsquo;avis</label><input type="number" step="1" min="0" id="v-nombre"></div>
-      </div>
-      <label>Lien vers la fiche Google Maps</label><input type="url" id="v-source">
-      <button class="btn" id="save-avis-meta" style="margin-bottom:1.5rem;">Enregistrer la note</button>
+      <p class="hint" style="margin-top:0.6rem;">Les avis se mettent à jour <strong>automatiquement toutes les heures</strong> depuis la page d&rsquo;avis Uniiti du restaurant&nbsp;: note globale, nombre d&rsquo;avis et six derniers commentaires. Il n&rsquo;y a rien à saisir ici.</p>
+      <div id="avis-resume"></div>
       <div id="avis-liste" style="border-top:2px solid var(--sable);padding-top:1rem;"></div>
-      <button class="btn secondary" id="avis-new">+ Nouvel avis</button>
-      <div id="avis-form" class="hidden" style="margin-top:1.5rem;border-top:2px solid var(--sable);padding-top:1rem;">
-        <div class="grid2">
-          <div><label>Note (1 à 5)</label><input type="number" min="1" max="5" id="v-a-note" value="5"></div>
-          <div><label>Auteur (ex&nbsp;: &laquo;&nbsp;Claire, avis Google&nbsp;&raquo;)</label><input type="text" id="v-a-auteur"></div>
-        </div>
-        <div class="grid2">
-          <div><label>Texte (FR)</label><textarea id="v-a-texte"></textarea></div>
-          <div><label>Texte (EN, optionnel)</label><textarea id="v-a-texte_en"></textarea></div>
-        </div>
-        <button class="btn" id="avis-save">Enregistrer l&rsquo;avis</button>
-        <button class="btn secondary" id="avis-cancel">Annuler</button>
-      </div>
     </div>
 
     <!-- ---- Backup ---- -->
@@ -507,6 +493,9 @@
     $('s-cafe_en').value = SITE.horaires.cafe_en;
     $('s-restaurant_fr').value = SITE.horaires.restaurant_fr;
     $('s-restaurant_en').value = SITE.horaires.restaurant_en;
+    $('s-cafe_de').value = SITE.horaires.cafe_de || '';
+    $('s-cafe_nl').value = SITE.horaires.cafe_nl || '';
+    $('s-cafe_it').value = SITE.horaires.cafe_it || '';
     $('s-reservation').value = SITE.liens.reservation;
     $('s-bons_cadeaux').value = SITE.liens.bons_cadeaux;
     $('s-instagram').value = SITE.liens.instagram;
@@ -521,7 +510,8 @@
   $('save-infos').addEventListener('click', async () => {
     SITE = {
       contact: { telephone: $('s-telephone').value, tel_href: $('s-tel_href').value, email: $('s-email').value },
-      horaires: { cafe_fr: $('s-cafe_fr').value, cafe_en: $('s-cafe_en').value, restaurant_fr: $('s-restaurant_fr').value, restaurant_en: $('s-restaurant_en').value },
+      horaires: { cafe_fr: $('s-cafe_fr').value, cafe_en: $('s-cafe_en').value, restaurant_fr: $('s-restaurant_fr').value, restaurant_en: $('s-restaurant_en').value,
+                  cafe_de: $('s-cafe_de').value, cafe_nl: $('s-cafe_nl').value, cafe_it: $('s-cafe_it').value },
       liens: { reservation: $('s-reservation').value, bons_cadeaux: $('s-bons_cadeaux').value, instagram: $('s-instagram').value, facebook: $('s-facebook').value },
       rubriques: { boutique: $('s-rub-boutique').checked, ateliers: $('s-rub-ateliers').checked, message_fr: $('s-rub-msg-fr').value, message_en: $('s-rub-msg-en').value }
     };
@@ -643,65 +633,23 @@
     } catch (e) { status(e.message, true); }
   });
 
-  // ---------- Avis ----------
-  function fillAvisMeta() {
-    $('v-note').value = AVIS.note_moyenne;
-    $('v-nombre').value = AVIS.nombre_avis;
-    $('v-source').value = AVIS.source_url;
-  }
+  // ---------- Avis (lecture seule : mis à jour chaque heure depuis Uniiti) ----------
+  // Textes écrits par des clients sur une page tierce : toujours échappés avant affichage.
+  const escA = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-  $('save-avis-meta').addEventListener('click', async () => {
-    AVIS.note_moyenne = parseFloat($('v-note').value) || 0;
-    AVIS.nombre_avis = parseInt($('v-nombre').value, 10) || 0;
-    AVIS.source_url = $('v-source').value;
-    try { await saveFile('data/avis.json', AVIS, 'note moyenne des avis'); } catch (e) { status(e.message, true); }
-  });
+  function fillAvisMeta() {
+    const maj = AVIS.mis_a_jour ? new Date(AVIS.mis_a_jour).toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' }) : '—';
+    $('avis-resume').innerHTML = '<p><strong>' + escA(AVIS.note_moyenne) + '/5</strong> &middot; ' + escA(AVIS.nombre_avis) +
+      ' avis &middot; dernière mise à jour&nbsp;: ' + escA(maj) +
+      (AVIS.source_url ? ' &middot; <a href="' + escA(AVIS.source_url) + '" target="_blank" rel="noopener">voir sur Uniiti</a>' : '') + '</p>';
+  }
 
   function renderAvis() {
-    $('avis-liste').innerHTML = (AVIS.avis || []).map((a, i) =>
-      '<div class="item"><div><strong>' + '★'.repeat(a.note) + '</strong><small>' + a.auteur + ' — ' + a.texte.slice(0, 60) + (a.texte.length > 60 ? '…' : '') + '</small></div>' +
-      '<div class="item-actions"><button data-edit="' + i + '">Modifier</button><button class="del" data-del="' + i + '">Suppr.</button></div></div>'
+    $('avis-liste').innerHTML = (AVIS.avis || []).map((a) =>
+      '<div class="item"><div><strong>' + '★'.repeat(a.note) + '</strong><small>' + escA(a.auteur) + ' — ' +
+      escA(a.texte.slice(0, 80)) + (a.texte.length > 80 ? '…' : '') + '</small></div></div>'
     ).join('') || '<p class="hint">Aucun avis pour le moment.</p>';
   }
-
-  $('avis-liste').addEventListener('click', async (e) => {
-    const ed = e.target.dataset.edit, del = e.target.dataset.del;
-    if (ed != null) {
-      editAvis = +ed;
-      const a = AVIS.avis[editAvis];
-      $('v-a-note').value = a.note; $('v-a-auteur').value = a.auteur;
-      $('v-a-texte').value = a.texte; $('v-a-texte_en').value = a.texte_en || '';
-      $('avis-form').classList.remove('hidden');
-    }
-    if (del != null && confirm('Supprimer cet avis ?')) {
-      AVIS.avis.splice(+del, 1);
-      try { await saveFile('data/avis.json', AVIS, 'suppression avis'); renderAvis(); } catch (err) { status(err.message, true); }
-    }
-  });
-
-  $('avis-new').addEventListener('click', () => {
-    editAvis = null;
-    $('v-a-note').value = 5; $('v-a-auteur').value = ''; $('v-a-texte').value = ''; $('v-a-texte_en').value = '';
-    $('avis-form').classList.remove('hidden');
-  });
-
-  $('avis-cancel').addEventListener('click', () => $('avis-form').classList.add('hidden'));
-
-  $('avis-save').addEventListener('click', async () => {
-    try {
-      const a = {
-        note: Math.max(1, Math.min(5, parseInt($('v-a-note').value, 10) || 5)),
-        auteur: $('v-a-auteur').value, texte: $('v-a-texte').value,
-        texte_en: $('v-a-texte_en').value || null
-      };
-      if (!a.auteur || !a.texte) return status('Auteur et texte obligatoires.', true);
-      if (!AVIS.avis) AVIS.avis = [];
-      if (editAvis != null) AVIS.avis[editAvis] = a; else AVIS.avis.push(a);
-      await saveFile('data/avis.json', AVIS, (editAvis != null ? 'modification' : 'ajout') + ' avis');
-      $('avis-form').classList.add('hidden');
-      renderAvis();
-    } catch (e) { status(e.message, true); }
-  });
 
   // ---------- Backup ----------
   $('backup-dl').addEventListener('click', () => {

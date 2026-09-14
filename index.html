@@ -29,7 +29,8 @@
     "telephone": "+33623828221",
     "url": "https://arthurlaffitte.github.io/franquette/",
     "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:30", "closes": "17:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "17:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "19:30", "closes": "23:00" }
     ],
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "1189" }
@@ -72,7 +73,7 @@
       <a href="cafe.html" class="univers-card card-placeholder-cafe">
         <div class="card-body">
           <h3 data-txt="accueil.carte_cafe_titre">Franquette Café</h3>
-          <p data-txt="accueil.carte_cafe_desc">Coffee shop méditerranéen &middot; Mar-Sam 8h30&ndash;17h30</p>
+          <p data-txt="accueil.carte_cafe_desc">Coffee shop méditerranéen &middot; Mar&ndash;Ven 8h30&ndash;17h30 &middot; Sam 10h&ndash;17h</p>
         </div>
       </a>
       <a href="restaurant.html" class="univers-card" style="background-image: url('img/table.jpeg');">
@@ -128,7 +129,7 @@
       </div>
       <div>
         <h3>Café</h3>
-        <p data-bind-html="horaires.cafe_fr">Mardi &ndash; Samedi<br>8h30 &ndash; 17h30</p>
+        <p data-bind-html="horaires.cafe_fr">Mardi &ndash; Vendredi<br>8h30 &ndash; 17h30<br>Samedi<br>10h &ndash; 17h</p>
       </div>
       <div>
         <h3>Restaurant</h3>
@@ -147,9 +148,9 @@
     <h2 class="section-title">Ils en parlent</h2>
     <hr class="divider">
     <div class="avis-note">
-      <div class="chiffre" id="avis-chiffre">4,7/5</div>
+      <div class="chiffre" id="avis-chiffre">4,9/5</div>
       <div class="etoiles" id="avis-etoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="sous">D&rsquo;après les avis Google (<span id="avis-count">1189</span>&nbsp;avis) &middot; <a id="avis-source" href="https://www.google.com/maps/place/?q=place_id:ChIJY0g8FU1u5kcRt07KK3BHrF8" target="_blank" rel="noopener">voir sur Google Maps</a></p>
+      <p class="sous">D&rsquo;après les avis vérifiés Uniiti (<span id="avis-count">1195</span>&nbsp;avis) &middot; <a id="avis-source" href="https://restaurantfranquette.fr/fr/opinions" target="_blank" rel="noopener">voir tous les avis</a></p>
     </div>
     <div class="avis-grid" id="avis-grid"></div>
   </div>

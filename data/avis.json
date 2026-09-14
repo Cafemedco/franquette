@@ -1,19 +1,45 @@
 {
-  "note_moyenne": 4.7,
-  "nombre_avis": 1189,
-  "source_url": "https://www.google.com/maps/place/?q=place_id:ChIJY0g8FU1u5kcRt07KK3BHrF8",
+  "source": "Uniiti",
+  "source_url": "https://restaurantfranquette.fr/fr/opinions",
+  "note_moyenne": 4.9,
+  "nombre_avis": 1195,
+  "mis_a_jour": "2026-09-14T21:48:30Z",
   "avis": [
     {
       "note": 5,
-      "texte": "Exemple à remplacer : copiez-collez ici un vrai avis Google, avec le prénom du client.",
-      "texte_en": "Placeholder to replace: paste a real Google review here, with the customer's first name.",
-      "auteur": "Prénom, avis Google"
+      "texte": "Très bon, un super restaurant !",
+      "auteur": "Anne B.",
+      "date": "2026-09-13"
     },
     {
       "note": 5,
-      "texte": "Exemple à remplacer : ajoutez 2 à 6 avis réels via l'onglet Avis de l'administration.",
-      "texte_en": "Placeholder to replace: add 2 to 6 real reviews via the Reviews tab in the admin panel.",
-      "auteur": "Prénom, avis Google"
+      "texte": "Saveurs et originalité !",
+      "auteur": "Stéphanie L.",
+      "date": "2026-09-12"
+    },
+    {
+      "note": 5,
+      "texte": "Good range of dishes with excellent quality. Topped off by the charming urbane host Phillipe who makes everyone feel welcome and included.",
+      "auteur": "Mary L. & Denis O.",
+      "date": "2026-09-09"
+    },
+    {
+      "note": 5,
+      "texte": "Très bon restaurant",
+      "auteur": "Orlane P.",
+      "date": "2026-09-09"
+    },
+    {
+      "note": 5,
+      "texte": "Super accueil, super cadre et excellente nourriture",
+      "auteur": "Marie P.",
+      "date": "2026-06-27"
+    },
+    {
+      "note": 4,
+      "texte": "Très bel accueil, menus à partager très bons mais le restaurant n'est ni climatisé, ni ventilé et nous y avons mangé en pleine canicule",
+      "auteur": "Nadine F.",
+      "date": "2026-06-25"
     }
   ]
 }
