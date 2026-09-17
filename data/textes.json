@@ -51,8 +51,11 @@
   },
   "accueil.carte_boutique_desc": {
     "label": "Accueil — carte boutique : description",
-    "fr": "Vins, céramiques, huile &amp; café d&rsquo;exception",
-    "en": "Wines, ceramics, exceptional oil &amp; coffee"
+    "fr": "Tasses en céramique &amp; café en grain d&rsquo;exception",
+    "en": "Ceramic cups &amp; exceptional whole-bean coffee",
+    "de": "Keramiktassen &amp; erlesener Kaffee in Bohnen",
+    "nl": "Keramische kopjes &amp; bijzondere koffiebonen",
+    "it": "Tazze in ceramica &amp; caffè in grani d&rsquo;eccezione"
   },
   "accueil.esprit_titre": {
     "label": "Accueil — titre « L'esprit Franquette »",
