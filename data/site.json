@@ -5,13 +5,13 @@
     "email": "bonjour@franquette-paris.fr"
   },
   "horaires": {
-    "cafe_fr": "Mardi &ndash; Vendredi<br>8h30 &ndash; 17h30<br>Samedi &amp; dimanche<br>10h &ndash; 17h",
-    "cafe_en": "Tuesday &ndash; Friday<br>8:30am &ndash; 5:30pm<br>Saturday &amp; Sunday<br>10am &ndash; 5pm",
-    "restaurant_fr": "Mardi &ndash; Samedi<br>19h30 &ndash; 23h00",
-    "restaurant_en": "Tuesday &ndash; Saturday<br>7:30pm &ndash; 11:00pm",
-    "cafe_de": "Dienstag &ndash; Freitag<br>8:30 &ndash; 17:30 Uhr<br>Samstag &amp; Sonntag<br>10 &ndash; 17 Uhr",
-    "cafe_nl": "Dinsdag &ndash; vrijdag<br>8.30 &ndash; 17.30 uur<br>Zaterdag &amp; zondag<br>10 &ndash; 17 uur",
-    "cafe_it": "Martedì &ndash; venerdì<br>8:30 &ndash; 17:30<br>Sabato &amp; domenica<br>10 &ndash; 17"
+    "cafe_fr": "Mardi &ndash; Vendredi 8h30 &ndash; 17h30<br>Samedi &amp; dimanche 10h &ndash; 17h",
+    "cafe_en": "Tuesday &ndash; Friday 8:30am &ndash; 5:30pm<br>Saturday &amp; Sunday 10am &ndash; 5pm",
+    "restaurant_fr": "Mardi &ndash; Samedi<br>&Agrave; partir de 19h30",
+    "restaurant_en": "Tuesday &ndash; Saturday<br>From 7:30pm",
+    "cafe_de": "Dienstag &ndash; Freitag 8:30 &ndash; 17:30 Uhr<br>Samstag &amp; Sonntag 10 &ndash; 17 Uhr",
+    "cafe_nl": "Dinsdag &ndash; vrijdag 8.30 &ndash; 17.30 uur<br>Zaterdag &amp; zondag 10 &ndash; 17 uur",
+    "cafe_it": "Martedì &ndash; venerdì 8:30 &ndash; 17:30<br>Sabato &amp; domenica 10 &ndash; 17"
   },
   "liens": {
     "reservation": "https://www.google.com/maps/reserve/v/dine/c/2s6eGiaiaBQ?hl=fr-FR",
@@ -21,7 +21,7 @@
     "facebook": "https://www.facebook.com/franquetterestaurant/"
   },
   "rubriques": {
-    "boutique": false,
+    "boutique": true,
     "ateliers": false,
     "message_fr": "Ouverture prochainement — courant septembre",
     "message_en": "Opening soon — this September"

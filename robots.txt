@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://arthurlaffitte.github.io/franquette/sitemap.xml
+Sitemap: https://franquette-paris.fr/sitemap.xml

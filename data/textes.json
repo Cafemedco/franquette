@@ -21,8 +21,8 @@
   },
   "accueil.carte_cafe_desc": {
     "label": "Accueil — carte cafe : description",
-    "fr": "Coffee shop méditerranéen &middot; Mar&ndash;Ven 8h30&ndash;17h30 &middot; Sam&ndash;Dim 10h&ndash;17h",
-    "en": "Mediterranean coffee shop &middot; Tue&ndash;Fri 8:30am&ndash;5:30pm &middot; Sat&ndash;Sun 10am&ndash;5pm"
+    "fr": "Coffee shop méditerranéen &middot; Mar&ndash;Ven 8h30&ndash;17h30<br>Sam&ndash;Dim 10h&ndash;17h",
+    "en": "Mediterranean coffee shop &middot; Tue&ndash;Fri 8:30am&ndash;5:30pm<br>Sat&ndash;Sun 10am&ndash;5pm"
   },
   "accueil.carte_restaurant_titre": {
     "label": "Accueil — carte restaurant : titre",
@@ -71,8 +71,8 @@
   },
   "cafe.tagline": {
     "label": "Café — sous-titre de la photo",
-    "fr": "Coffee shop méditerranéen &middot; mardi&ndash;vendredi 8h30&ndash;17h30 &middot; samedi &amp; dimanche 10h&ndash;17h",
-    "en": "Mediterranean coffee shop &middot; Tuesday&ndash;Friday 8:30am&ndash;5:30pm &middot; Saturday &amp; Sunday 10am&ndash;5pm"
+    "fr": "Coffee shop méditerranéen &middot; mardi&ndash;vendredi 8h30&ndash;17h30<br>Samedi &amp; dimanche 10h&ndash;17h",
+    "en": "Mediterranean coffee shop &middot; Tuesday&ndash;Friday 8:30am&ndash;5:30pm<br>Saturday &amp; Sunday 10am&ndash;5pm"
   },
   "cafe.presentation_titre": {
     "label": "Café — titre de présentation",
@@ -91,23 +91,32 @@
   },
   "restaurant.tagline": {
     "label": "Restaurant — sous-titre de la photo",
-    "fr": "Tapas à la française &middot; vins nature &amp; orange &middot; mardi&ndash;samedi 19h30&ndash;23h",
-    "en": "French tapas &middot; natural &amp; orange wines &middot; Tuesday&ndash;Saturday 7:30&ndash;11pm"
+    "fr": "Tapas à la française &middot; vins nature &amp; orange &middot; mardi&ndash;samedi &agrave; partir de 19h30",
+    "en": "French tapas &middot; natural &amp; orange wines &middot; Tuesday&ndash;Saturday from 7:30pm"
   },
   "restaurant.presentation_titre": {
     "label": "Restaurant — titre de présentation",
-    "fr": "Des tapas à la française",
-    "en": "French-style tapas"
+    "fr": "Des assiettes à partager",
+    "en": "Sharing plates",
+    "de": "Teller zum Teilen",
+    "nl": "Deelborden",
+    "it": "Piatti da condividere"
   },
   "restaurant.presentation_p1": {
     "label": "Restaurant — présentation, 1er paragraphe",
-    "fr": "Dans une ancienne boutique de bonbons devenue cabinet de curiosités, à 100&nbsp;mètres de la place de Clichy, Franquette imagine des tapas à la française aux accents cosmopolites&nbsp;: des produits <strong>bons, propres et justes",
-    "en": "In a former candy shop turned cabinet of curiosities, 100&nbsp;metres from Place de Clichy, Franquette creates French-style tapas with cosmopolitan accents: products that are <strong>good, clean and fair"
+    "fr": "Dans une ancienne boutique de bonbons devenue cabinet de curiosités, à 100&nbsp;mètres de la place de Clichy, Franquette imagine des assiettes à partager aux accents cosmopolites&nbsp;: des produits <strong>bons, propres et justes</strong> dans la philosophie du Slow Food.",
+    "en": "In a former candy shop turned cabinet of curiosities, 100&nbsp;metres from Place de Clichy, Franquette creates cosmopolitan sharing plates: products that are <strong>good, clean and fair</strong>, in the spirit of Slow Food.",
+    "de": "In einem ehemaligen Süßwarenladen, der zum Kuriositätenkabinett wurde, 100&nbsp;Meter vom Place de Clichy entfernt, kreiert Franquette Teller zum Teilen mit kosmopolitischem Akzent: <strong>gute, saubere und faire</strong> Produkte, ganz im Geiste von Slow Food.",
+    "nl": "In een voormalige snoepwinkel die een rariteitenkabinet werd, 100&nbsp;meter van de Place de Clichy, bedenkt Franquette deelborden met kosmopolitische accenten: <strong>goede, zuivere en eerlijke</strong> producten, in de geest van Slow Food.",
+    "it": "In un&rsquo;ex bottega di caramelle diventata gabinetto delle curiosità, a 100&nbsp;metri da Place de Clichy, Franquette immagina piatti da condividere dagli accenti cosmopoliti: prodotti <strong>buoni, puliti e giusti</strong>, nello spirito dello Slow Food."
   },
   "restaurant.presentation_p2": {
     "label": "Restaurant — présentation, 2e paragraphe",
-    "fr": "À la cave&nbsp;: vins nature, vins oranges et macérations, jolies bulles et pépites régionales, à partager dans une atmosphère festive.",
-    "en": "In the cellar: natural wines, orange and macerated wines, lovely bubbles and regional gems, to share in a festive atmosphere."
+    "fr": "À la cave&nbsp;: vins bio, biodynamie et nature, de vignerons amis&nbsp;!",
+    "en": "In the cellar: organic, biodynamic and natural wines, from grower friends!",
+    "de": "Im Weinkeller: Bio-, biodynamische und Naturweine von befreundeten Winzern!",
+    "nl": "In de kelder: biologische, biodynamische en natuurlijke wijnen van bevriende wijnboeren!",
+    "it": "In cantina: vini bio, biodinamici e naturali, di viticoltori amici!"
   },
   "ateliers.tagline": {
     "label": "Ateliers — sous-titre de la photo",
@@ -146,12 +155,26 @@
   },
   "boutique.intro_titre": {
     "label": "Boutique — titre d'introduction",
-    "fr": "Retrouver la carte Franquette",
-    "en": "The Franquette selection"
+    "fr": "Venez découvrir notre sélection",
+    "en": "Come discover our selection",
+    "de": "Entdecken Sie unsere Auswahl",
+    "nl": "Kom onze selectie ontdekken",
+    "it": "Vieni a scoprire la nostra selezione"
   },
   "boutique.intro": {
     "label": "Boutique — texte d'introduction",
-    "fr": "Tout ce que vous aimez à table, à rapporter à la maison&nbsp;: les vins de la cave, les céramiques de l&rsquo;atelier, et nos produits d&rsquo;exception.",
-    "en": "Everything you love at the table, to take home: wines from the cellar, ceramics from the workshop, and our exceptional products."
+    "fr": "Tasses en céramique faites main et café de spécialité en grain, torréfié par Iota&nbsp;: à découvrir et à emporter, au 8 rue des Dames.",
+    "en": "Handmade ceramic cups and specialty whole-bean coffee, roasted by Iota: to discover and take home, at 8 rue des Dames.",
+    "de": "Handgefertigte Keramiktassen und Spezialitätenkaffee in Bohnen, geröstet von Iota: zum Entdecken und Mitnehmen, in der 8 rue des Dames.",
+    "nl": "Handgemaakte keramische kopjes en specialty koffiebonen, gebrand door Iota: te ontdekken en mee te nemen, op 8 rue des Dames.",
+    "it": "Tazze in ceramica fatte a mano e caffè speciale in grani, tostato da Iota: da scoprire e da portare a casa, all'8 rue des Dames."
+  },
+  "restaurant.presentation_p3": {
+    "label": "Restaurant — présentation, 3e paragraphe",
+    "fr": "En cuisine, c&rsquo;est chef Jacques, qui nous revient des Amériques. Chef et patron du Jac Bistro à São&nbsp;Paulo, il amène une touche brésilienne à la cuisine de Franquette. Ami de Philippe depuis très très longtemps, à l&rsquo;école, en colloc ou en voyage autour du monde, du Guyana à la Guinée en passant par le Turkménistan, pour ne parler que des plus rigolos.",
+    "en": "In the kitchen, it&rsquo;s chef Jacques, back from the Americas. Chef and owner of Jac Bistro in São&nbsp;Paulo, he brings a Brazilian touch to Franquette&rsquo;s cooking. A very old friend of Philippe&rsquo;s &mdash; from school, flat-sharing, or travelling the world together, from Guyana to Guinea via Turkmenistan, to name only the funniest stops.",
+    "de": "In der Küche steht Chef Jacques, der aus Amerika zurückgekehrt ist. Als Chef und Inhaber des Jac&nbsp;Bistro in São&nbsp;Paulo bringt er einen brasilianischen Akzent in die Küche von Franquette. Ein sehr alter Freund von Philippe &mdash; aus der Schulzeit, aus gemeinsamen WGs oder von Weltreisen, von Guyana über Guinea bis Turkmenistan, um nur die lustigsten Etappen zu nennen.",
+    "nl": "In de keuken staat chef Jacques, teruggekeerd uit Amerika. Als chef en eigenaar van Jac Bistro in São&nbsp;Paulo brengt hij een Braziliaanse toets in de keuken van Franquette. Een heel oude vriend van Philippe &mdash; van school, van samenwonen of van reizen rond de wereld, van Guyana tot Guinee via Turkmenistan, om maar de grappigste te noemen.",
+    "it": "In cucina c&rsquo;è lo chef Jacques, tornato dalle Americhe. Chef e patron del Jac Bistro a San&nbsp;Paolo, porta un tocco brasiliano alla cucina di Franquette. Amico di Philippe da moltissimo tempo, dai banchi di scuola, dalle coabitazioni o dai viaggi in giro per il mondo, dalla Guyana alla Guinea passando per il Turkmenistan, per citare solo le tappe più divertenti."
   }
 }
