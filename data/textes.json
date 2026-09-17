@@ -21,8 +21,8 @@
   },
   "accueil.carte_cafe_desc": {
     "label": "Accueil — carte cafe : description",
-    "fr": "Coffee shop méditerranéen &middot; Mar&ndash;Ven 8h30&ndash;17h30 &middot; Sam 10h&ndash;17h",
-    "en": "Mediterranean coffee shop &middot; Tue&ndash;Fri 8:30am&ndash;5:30pm &middot; Sat 10am&ndash;5pm"
+    "fr": "Coffee shop méditerranéen &middot; Mar&ndash;Ven 8h30&ndash;17h30 &middot; Sam&ndash;Dim 10h&ndash;17h",
+    "en": "Mediterranean coffee shop &middot; Tue&ndash;Fri 8:30am&ndash;5:30pm &middot; Sat&ndash;Sun 10am&ndash;5pm"
   },
   "accueil.carte_restaurant_titre": {
     "label": "Accueil — carte restaurant : titre",
@@ -71,8 +71,8 @@
   },
   "cafe.tagline": {
     "label": "Café — sous-titre de la photo",
-    "fr": "Coffee shop méditerranéen &middot; mardi&ndash;vendredi 8h30&ndash;17h30 &middot; samedi 10h&ndash;17h",
-    "en": "Mediterranean coffee shop &middot; Tuesday&ndash;Friday 8:30am&ndash;5:30pm &middot; Saturday 10am&ndash;5pm"
+    "fr": "Coffee shop méditerranéen &middot; mardi&ndash;vendredi 8h30&ndash;17h30 &middot; samedi &amp; dimanche 10h&ndash;17h",
+    "en": "Mediterranean coffee shop &middot; Tuesday&ndash;Friday 8:30am&ndash;5:30pm &middot; Saturday &amp; Sunday 10am&ndash;5pm"
   },
   "cafe.presentation_titre": {
     "label": "Café — titre de présentation",

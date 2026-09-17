@@ -10,11 +10,11 @@
   const L = (obj, key) => obj[key + '_' + LANG] || (LANG !== 'fr' && obj[key + '_en']) || obj[key];
 
   const UI_ALL = {
-    fr: { locale: 'fr-FR', prix: 'Prix à venir', lire: 'En savoir plus', tout: 'Tout', commander: 'Commander', bientot: 'Bientôt disponible', surplace: 'Également disponible sur place au 8 rue des Dames, Paris 17e.', aucuneActu: 'Pas encore d’actus — revenez vite !', aucunProduit: 'Pas encore de produit dans cette catégorie.', suivre: 'Suivre @franquette_paris', peaufine: 'On peaufine les derniers détails de cette partie de Franquette. Suivez-nous sur Instagram pour être les premiers informés !' },
-    en: { locale: 'en-GB', prix: 'Price coming soon', lire: 'Read more', tout: 'All', commander: 'Order', bientot: 'Available soon', surplace: 'Also available in person at 8 rue des Dames, Paris 17th.', aucuneActu: 'No news yet — come back soon!', aucunProduit: 'No products in this category yet.', suivre: 'Follow @franquette_paris', peaufine: 'We are putting the finishing touches to this part of Franquette. Follow us on Instagram to be the first to know!' },
-    de: { locale: 'de-DE', prix: 'Preis folgt', lire: 'Mehr lesen', tout: 'Alle', commander: 'Bestellen', bientot: 'Bald verfügbar', surplace: 'Auch vor Ort erhältlich: 8 rue des Dames, Paris 17.', aucuneActu: 'Noch keine Neuigkeiten — bald mehr!', aucunProduit: 'Noch keine Produkte in dieser Kategorie.', suivre: '@franquette_paris folgen', peaufine: 'Wir legen hier letzte Hand an. Folgen Sie uns auf Instagram, um es als Erste zu erfahren!' },
-    nl: { locale: 'nl-NL', prix: 'Prijs volgt', lire: 'Lees meer', tout: 'Alles', commander: 'Bestellen', bientot: 'Binnenkort beschikbaar', surplace: 'Ook verkrijgbaar ter plaatse: 8 rue des Dames, Parijs 17e.', aucuneActu: 'Nog geen nieuws — kom snel terug!', aucunProduit: 'Nog geen producten in deze categorie.', suivre: 'Volg @franquette_paris', peaufine: 'We leggen de laatste hand aan dit deel van Franquette. Volg ons op Instagram en weet het als eerste!' },
-    it: { locale: 'it-IT', prix: 'Prezzo in arrivo', lire: 'Scopri di più', tout: 'Tutto', commander: 'Ordina', bientot: 'Presto disponibile', surplace: 'Disponibile anche sul posto: 8 rue des Dames, Parigi 17°.', aucuneActu: 'Ancora nessuna novità — torna presto!', aucunProduit: 'Ancora nessun prodotto in questa categoria.', suivre: 'Segui @franquette_paris', peaufine: 'Stiamo rifinendo gli ultimi dettagli di questa parte di Franquette. Seguici su Instagram per saperlo per primi!' }
+    fr: { locale: 'fr-FR', prix: 'Prix à venir', lire: 'En savoir plus', tout: 'Tout', commander: 'Commander', bientot: 'Bientôt disponible', surplace: 'Également disponible sur place au 8 rue des Dames, Paris 17e.', aucuneActu: 'Pas encore d’actus — revenez vite !', aucunProduit: 'Pas encore de produit dans cette catégorie.', suivre: 'Suivre @franquette_cafe', peaufine: 'On peaufine les derniers détails de cette partie de Franquette. Suivez-nous sur Instagram pour être les premiers informés !' },
+    en: { locale: 'en-GB', prix: 'Price coming soon', lire: 'Read more', tout: 'All', commander: 'Order', bientot: 'Available soon', surplace: 'Also available in person at 8 rue des Dames, Paris 17th.', aucuneActu: 'No news yet — come back soon!', aucunProduit: 'No products in this category yet.', suivre: 'Follow @franquette_cafe', peaufine: 'We are putting the finishing touches to this part of Franquette. Follow us on Instagram to be the first to know!' },
+    de: { locale: 'de-DE', prix: 'Preis folgt', lire: 'Mehr lesen', tout: 'Alle', commander: 'Bestellen', bientot: 'Bald verfügbar', surplace: 'Auch vor Ort erhältlich: 8 rue des Dames, Paris 17.', aucuneActu: 'Noch keine Neuigkeiten — bald mehr!', aucunProduit: 'Noch keine Produkte in dieser Kategorie.', suivre: '@franquette_cafe folgen', peaufine: 'Wir legen hier letzte Hand an. Folgen Sie uns auf Instagram, um es als Erste zu erfahren!' },
+    nl: { locale: 'nl-NL', prix: 'Prijs volgt', lire: 'Lees meer', tout: 'Alles', commander: 'Bestellen', bientot: 'Binnenkort beschikbaar', surplace: 'Ook verkrijgbaar ter plaatse: 8 rue des Dames, Parijs 17e.', aucuneActu: 'Nog geen nieuws — kom snel terug!', aucunProduit: 'Nog geen producten in deze categorie.', suivre: 'Volg @franquette_cafe', peaufine: 'We leggen de laatste hand aan dit deel van Franquette. Volg ons op Instagram en weet het als eerste!' },
+    it: { locale: 'it-IT', prix: 'Prezzo in arrivo', lire: 'Scopri di più', tout: 'Tutto', commander: 'Ordina', bientot: 'Presto disponibile', surplace: 'Disponibile anche sul posto: 8 rue des Dames, Parigi 17°.', aucuneActu: 'Ancora nessuna novità — torna presto!', aucunProduit: 'Ancora nessun prodotto in questa categoria.', suivre: 'Segui @franquette_cafe', peaufine: 'Stiamo rifinendo gli ultimi dettagli di questa parte di Franquette. Seguici su Instagram per saperlo per primi!' }
   };
   const UI = UI_ALL[LANG] || UI_ALL.en;
 
@@ -50,7 +50,13 @@
     });
     document.querySelectorAll('a[href*="restaurantfranquette.fr"]').forEach((a) => { a.href = site.liens.reservation; });
     document.querySelectorAll('a[href*="uniiti.com"]').forEach((a) => { a.href = site.liens.bons_cadeaux; });
-    document.querySelectorAll('a[href*="instagram.com"]').forEach((a) => { a.href = site.liens.instagram; });
+    // Deux comptes Instagram : @franquette_cafe (coffee shop) et @franquette_paris (restaurant).
+    // Chaque lien conserve le compte vers lequel il pointe déjà dans le HTML.
+    document.querySelectorAll('a[href*="instagram.com"]').forEach((a) => {
+      const cafe = /franquette_cafe/.test(a.getAttribute('href'));
+      const url = (cafe ? site.liens.instagram_cafe : site.liens.instagram) || site.liens.instagram;
+      if (url) a.href = url;
+    });
     document.querySelectorAll('a[href*="facebook.com"]').forEach((a) => { a.href = site.liens.facebook; });
     document.querySelectorAll('[data-bind-html]').forEach((el) => {
       const lire = (chemin) => chemin.split('.').reduce((o, k) => (o ? o[k] : null), site);
@@ -76,7 +82,7 @@
       sec.innerHTML = '<div class="container" style="text-align:center;">' +
         '<h2 class="section-title">' + esc(soonMsg) + '</h2><hr class="divider">' +
         '<p class="section-sub">' + UI.peaufine + '</p>' +
-        '<p style="text-align:center;"><a class="btn dark" href="' + esc((site.liens && site.liens.instagram) || '#') + '" target="_blank" rel="noopener">' +
+        '<p style="text-align:center;"><a class="btn dark" href="' + esc((site.liens && (site.liens.instagram_cafe || site.liens.instagram)) || '#') + '" target="_blank" rel="noopener">' +
         UI.suivre + '</a></p></div>';
       const footer = document.querySelector('footer');
       footer.parentNode.insertBefore(sec, footer);

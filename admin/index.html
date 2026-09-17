@@ -124,7 +124,8 @@
       <div class="grid2">
         <div><label>Lien réservation restaurant</label><input type="url" id="s-reservation"></div>
         <div><label>Lien bons cadeaux</label><input type="url" id="s-bons_cadeaux"></div>
-        <div><label>Instagram</label><input type="url" id="s-instagram"></div>
+        <div><label>Instagram caf&eacute;</label><input type="url" id="s-instagram_cafe"></div>
+        <div><label>Instagram restaurant</label><input type="url" id="s-instagram"></div>
         <div><label>Facebook</label><input type="url" id="s-facebook"></div>
       </div>
       <h3 style="margin-top:1.8rem;">Rubriques en mode &laquo;&nbsp;&Agrave; venir&nbsp;&raquo;</h3>
@@ -498,6 +499,7 @@
     $('s-cafe_it').value = SITE.horaires.cafe_it || '';
     $('s-reservation').value = SITE.liens.reservation;
     $('s-bons_cadeaux').value = SITE.liens.bons_cadeaux;
+    $('s-instagram_cafe').value = SITE.liens.instagram_cafe || '';
     $('s-instagram').value = SITE.liens.instagram;
     $('s-facebook').value = SITE.liens.facebook;
     const R = SITE.rubriques || {};
@@ -512,7 +514,7 @@
       contact: { telephone: $('s-telephone').value, tel_href: $('s-tel_href').value, email: $('s-email').value },
       horaires: { cafe_fr: $('s-cafe_fr').value, cafe_en: $('s-cafe_en').value, restaurant_fr: $('s-restaurant_fr').value, restaurant_en: $('s-restaurant_en').value,
                   cafe_de: $('s-cafe_de').value, cafe_nl: $('s-cafe_nl').value, cafe_it: $('s-cafe_it').value },
-      liens: { reservation: $('s-reservation').value, bons_cadeaux: $('s-bons_cadeaux').value, instagram: $('s-instagram').value, facebook: $('s-facebook').value },
+      liens: { reservation: $('s-reservation').value, bons_cadeaux: $('s-bons_cadeaux').value, instagram_cafe: $('s-instagram_cafe').value, instagram: $('s-instagram').value, facebook: $('s-facebook').value },
       rubriques: { boutique: $('s-rub-boutique').checked, ateliers: $('s-rub-ateliers').checked, message_fr: $('s-rub-msg-fr').value, message_en: $('s-rub-msg-en').value }
     };
     try { await saveFile('data/site.json', SITE, 'infos pratiques'); } catch (e) { status(e.message, true); }
