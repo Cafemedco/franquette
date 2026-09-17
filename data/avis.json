@@ -2,9 +2,15 @@
   "source": "Uniiti",
   "source_url": "https://restaurantfranquette.fr/fr/opinions",
   "note_moyenne": 4.9,
-  "nombre_avis": 1196,
-  "mis_a_jour": "2026-09-16T13:33:27Z",
+  "nombre_avis": 1197,
+  "mis_a_jour": "2026-09-17T11:49:48Z",
   "avis": [
+    {
+      "note": 5,
+      "texte": "Repas exceptionnel et gérant hors du commun",
+      "auteur": "Enrica B.",
+      "date": "2026-09-17"
+    },
     {
       "note": 5,
       "texte": "Accueil très chaleureux, plats excellents, nous reviendrons !",
@@ -88,12 +94,6 @@
       "texte": "S-U-P-E-R, endroit très cosy, nourriture excellente, Philippe le gérant est conviviale et très sympathique : je recommande les yeux fermés.",
       "auteur": "Grégoire P.",
       "date": "2026-05-20"
-    },
-    {
-      "note": 2,
-      "texte": "Cadre très sympa. Personnel très agréable. Nourriture moyenne",
-      "auteur": "Clotilde B.",
-      "date": "2026-05-17"
     }
   ]
 }
