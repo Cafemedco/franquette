@@ -31,8 +31,11 @@
   },
   "accueil.carte_restaurant_desc": {
     "label": "Accueil — carte restaurant : description",
-    "fr": "Tapas à la française &amp; vins nature &middot; le soir",
-    "en": "French tapas &amp; natural wines &middot; evenings"
+    "fr": "Tapas à la française &amp; vins nature &middot; mardi&ndash;samedi &agrave; partir de 19h30",
+    "en": "French tapas &amp; natural wines &middot; Tuesday&ndash;Saturday from 7:30pm",
+    "de": "Französische Tapas &amp; Naturweine &middot; Di&ndash;Sa ab 19:30 Uhr",
+    "nl": "Franse tapas &amp; natuurwijn &middot; di&ndash;za vanaf 19:30 uur",
+    "it": "Tapas alla francese &amp; vini naturali &middot; mar&ndash;sab dalle 19:30"
   },
   "accueil.carte_ateliers_titre": {
     "label": "Accueil — carte ateliers : titre",
