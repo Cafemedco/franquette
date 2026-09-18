@@ -267,9 +267,12 @@ section { padding: 5rem 1.5rem; }
 
 .split img { border-radius: 6px; }
 
-.split-photos { display: grid; grid-template-columns: 3fr 2fr; gap: 1rem; align-items: end; }
+.split-photos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; align-items: end; }
 .split-photos img { width: 100%; height: auto; display: block; }
-.split-photos img:last-child { margin-bottom: 1.5rem; }
+.split-photos img:nth-child(1) { grid-column: span 3; }
+.split-photos img:nth-child(2) { grid-column: span 2; margin-bottom: 1.5rem; }
+.split-photos img:nth-child(3) { grid-column: span 2; margin-top: 1.5rem; }
+.split-photos img:nth-child(4) { grid-column: span 3; }
 
 .split h2 { font-size: 1.4rem; margin-bottom: 1rem; }
 
