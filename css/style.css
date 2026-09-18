@@ -270,12 +270,14 @@ section { padding: 5rem 1.5rem; }
 .text-block h2 { font-size: 1.4rem; margin-bottom: 1rem; }
 .text-block p { margin-bottom: 1rem; color: #3a3a3a; }
 
-.menu-section.esprit-band { background: rgba(69, 32, 42, 0.85); color: var(--creme); }
+.menu-section.esprit-band { background: rgba(69, 32, 42, 0.65); color: var(--creme); }
 .esprit-band .text-block h2,
 .esprit-band .text-block p { color: var(--creme); }
 
-.menu-section.lieu-band { background: rgba(73, 82, 47, 0.85); color: var(--creme); }
+.menu-section.lieu-band { background: rgba(73, 82, 47, 0.65); color: var(--creme); }
 .lieu-band .section-title { color: var(--creme); }
+
+.cafe-intro-band { background: rgba(73, 82, 47, 0.1); }
 
 .split-photos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; align-items: end; }
 .split-photos > img, .split-photos > .split-stack { width: 100%; display: block; }
