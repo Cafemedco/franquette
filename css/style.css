@@ -381,18 +381,17 @@ details.wine-cat[open] summary { margin-bottom: 0.8rem; }
   line-height: 1.4;
 }
 .boutique-collage img:nth-child(1) { grid-column: span 4; grid-row: span 4; }
-.boutique-collage img:nth-child(2) { grid-column: span 2; grid-row: span 4; }
-.boutique-collage img:nth-child(3) { grid-column: span 2; grid-row: span 3; }
-.boutique-collage img:nth-child(4) { grid-column: span 4; grid-row: span 3; }
+.boutique-collage img:nth-child(2) { grid-column: span 2; grid-row: span 2; }
+.boutique-collage img:nth-child(3) { grid-column: span 2; grid-row: span 2; }
+.boutique-collage img:nth-child(4) { grid-column: span 3; grid-row: span 3; }
 .boutique-collage img:nth-child(5) { grid-column: span 3; grid-row: span 3; }
-.boutique-collage img:nth-child(6) { grid-column: span 3; grid-row: span 3; }
-.boutique-collage .collage-text:nth-child(7) { grid-column: span 6; grid-row: span 2; }
+.boutique-collage .collage-text:nth-child(6) { grid-column: span 6; grid-row: span 2; }
 
 @media (max-width: 640px) {
   .boutique-collage { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
   .boutique-collage img,
   .boutique-collage .collage-text { grid-column: span 1 !important; grid-row: span 2 !important; }
-  .boutique-collage .collage-text:nth-child(7) { grid-column: span 2 !important; grid-row: span 1 !important; }
+  .boutique-collage .collage-text:nth-child(6) { grid-column: span 2 !important; grid-row: span 1 !important; }
 }
 
 /* ---------- Infos pratiques ---------- */
