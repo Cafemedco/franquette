@@ -54,11 +54,11 @@
   },
   "accueil.carte_boutique_desc": {
     "label": "Accueil — carte boutique : description",
-    "fr": "Tasses en céramique &amp; café de spécialité",
-    "en": "Ceramic cups &amp; specialty coffee",
-    "de": "Keramiktassen &amp; Spezialitätenkaffee",
-    "nl": "Keramische kopjes &amp; specialty koffie",
-    "it": "Tazze in ceramica &amp; caffè speciale"
+    "fr": "Céramiques &amp; café de spécialité",
+    "en": "Ceramics &amp; specialty coffee",
+    "de": "Keramik &amp; Spezialitätenkaffee",
+    "nl": "Keramiek &amp; specialty koffie",
+    "it": "Ceramiche &amp; caffè speciale"
   },
   "accueil.esprit_titre": {
     "label": "Accueil — titre « L'esprit Franquette »",
