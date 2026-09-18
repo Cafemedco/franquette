@@ -11,8 +11,8 @@
   },
   "accueil.univers_intro": {
     "label": "Accueil — texte d'introduction",
-    "fr": "Ancienne boutique de bonbons devenue cabinet de curiosités, Franquette vit du matin au soir : café méditerranéen la journée, tapas à la française le soir, terre et céramique entre les deux.",
-    "en": "A former candy shop turned cabinet of curiosities, Franquette lives from morning to night: Mediterranean coffee by day, French tapas in the evening, clay and ceramics in between."
+    "fr": "Franquette vit du matin au soir : café méditerranéen la journée, tapas à la française le soir, terre et céramique entre les deux.",
+    "en": "Franquette lives from morning to night: Mediterranean coffee by day, French tapas in the evening, clay and ceramics in between."
   },
   "accueil.carte_cafe_titre": {
     "label": "Accueil — carte cafe : titre",
@@ -54,11 +54,11 @@
   },
   "accueil.carte_boutique_desc": {
     "label": "Accueil — carte boutique : description",
-    "fr": "Tasses en céramique &amp; café en grain d&rsquo;exception",
-    "en": "Ceramic cups &amp; exceptional whole-bean coffee",
-    "de": "Keramiktassen &amp; erlesener Kaffee in Bohnen",
-    "nl": "Keramische kopjes &amp; bijzondere koffiebonen",
-    "it": "Tazze in ceramica &amp; caffè in grani d&rsquo;eccezione"
+    "fr": "Tasses en céramique &amp; café de spécialité",
+    "en": "Ceramic cups &amp; specialty coffee",
+    "de": "Keramiktassen &amp; Spezialitätenkaffee",
+    "nl": "Keramische kopjes &amp; specialty koffie",
+    "it": "Tazze in ceramica &amp; caffè speciale"
   },
   "accueil.esprit_titre": {
     "label": "Accueil — titre « L'esprit Franquette »",
@@ -97,8 +97,8 @@
   },
   "restaurant.tagline": {
     "label": "Restaurant — sous-titre de la photo",
-    "fr": "Tapas à la française &middot; vins nature &amp; orange &middot; mardi&ndash;samedi &agrave; partir de 19h30",
-    "en": "French tapas &middot; natural &amp; orange wines &middot; Tuesday&ndash;Saturday from 7:30pm"
+    "fr": "Tapas à la française &middot; vins nature &amp; orange<br>Mardi&ndash;samedi &agrave; partir de 19h30",
+    "en": "French tapas &middot; natural &amp; orange wines<br>Tuesday&ndash;Saturday from 7:30pm"
   },
   "restaurant.presentation_titre": {
     "label": "Restaurant — titre de présentation",
