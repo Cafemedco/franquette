@@ -12,6 +12,21 @@ if (burger && navList) {
   });
 }
 
+// Apparition en douceur des sections au défilement
+const revealTargets = document.querySelectorAll('section:not(.hero)');
+if (revealTargets.length && 'IntersectionObserver' in window) {
+  revealTargets.forEach((el) => el.classList.add('reveal'));
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealTargets.forEach((el) => revealObserver.observe(el));
+}
+
 // Onglets de carte (café) : un clic par catégorie
 document.querySelectorAll('.carte-tabs').forEach((tabs) => {
   tabs.addEventListener('click', (e) => {

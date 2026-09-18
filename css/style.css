@@ -154,7 +154,7 @@ nav a:hover, nav a.active { color: var(--terracotta); }
 .hero .btn { margin-top: 2.2rem; }
 
 /* Hero réduit pour pages intérieures */
-.hero.small { min-height: 66vh; }
+.hero.small { min-height: 60vh; }
 
 /* ---------- Boutons ---------- */
 .btn {
@@ -735,3 +735,11 @@ footer .legal a { color: inherit; }
 /* ---------- Lien discret vers l'administration ---------- */
 .admin-link { color: inherit; opacity: 0.45; transition: opacity 0.2s; }
 .admin-link:hover { opacity: 1; color: var(--terracotta); }
+
+/* ---------- Apparition en douceur au défilement ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in-view { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
