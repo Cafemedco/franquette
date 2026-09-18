@@ -274,7 +274,7 @@ section { padding: 5rem 1.5rem; }
 .esprit-band .text-block h2,
 .esprit-band .text-block p { color: var(--creme); }
 
-.menu-section.lieu-band { background: rgba(73, 82, 47, 0.65); color: var(--creme); }
+.menu-section.lieu-band { background: rgba(73, 82, 47, 0.45); color: var(--creme); padding-top: 2.5rem; }
 .lieu-band .section-title { color: var(--creme); }
 
 .cafe-intro-band { background: rgba(73, 82, 47, 0.1); }
