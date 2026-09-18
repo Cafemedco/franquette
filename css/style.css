@@ -270,11 +270,11 @@ section { padding: 5rem 1.5rem; }
 .text-block h2 { font-size: 1.4rem; margin-bottom: 1rem; }
 .text-block p { margin-bottom: 1rem; color: #3a3a3a; }
 
-.menu-section.esprit-band { background: rgba(69, 32, 42, 0.65); color: var(--creme); }
+.menu-section.esprit-band { background: rgba(69, 32, 42, 0.92); color: var(--creme); }
 .esprit-band .text-block h2,
 .esprit-band .text-block p { color: var(--creme); }
 
-.menu-section.lieu-band { background: rgba(73, 82, 47, 0.45); color: var(--creme); padding-top: 2.5rem; }
+.menu-section.lieu-band { background: rgba(73, 82, 47, 0.92); color: var(--creme); padding-top: 2.5rem; }
 .lieu-band .section-title { color: var(--creme); }
 
 .cafe-intro-band { background: rgba(73, 82, 47, 0.1); }
