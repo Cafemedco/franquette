@@ -154,8 +154,7 @@ nav a:hover, nav a.active { color: var(--terracotta); }
 .hero .btn { margin-top: 2.2rem; }
 
 /* Hero réduit pour pages intérieures */
-.hero.small { min-height: 55vh; }
-body.theme-cafe .hero.small { min-height: 66vh; }
+.hero.small { min-height: 66vh; }
 
 /* ---------- Boutons ---------- */
 .btn {
