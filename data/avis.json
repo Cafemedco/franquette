@@ -3,7 +3,7 @@
   "source_url": "https://restaurantfranquette.fr/fr/opinions",
   "note_moyenne": 4.9,
   "nombre_avis": 1197,
-  "mis_a_jour": "2026-09-17T11:49:48Z",
+  "mis_a_jour": "2026-09-18T04:30:41Z",
   "avis": [
     {
       "note": 5,
@@ -32,7 +32,7 @@
     {
       "note": 5,
       "texte": "Good range of dishes with excellent quality. Topped off by the charming urbane host Phillipe who makes everyone feel welcome and included.",
-      "auteur": "Mary L.",
+      "auteur": "Mary L. & Denis O.",
       "date": "2026-09-09"
     },
     {
@@ -52,48 +52,6 @@
       "texte": "Très bel accueil, menus à partager très bons mais le restaurant n'est ni climatisé, ni ventilé et nous y avons mangé en pleine canicule",
       "auteur": "Nadine F.",
       "date": "2026-06-25"
-    },
-    {
-      "note": 5,
-      "texte": "délicieux, accueil extra, je recommande à 1000%!",
-      "auteur": "Julie D.",
-      "date": "2026-06-18"
-    },
-    {
-      "note": 5,
-      "texte": "Plats et accueil toujours au top",
-      "auteur": "Thomas B.",
-      "date": "2026-06-17"
-    },
-    {
-      "note": 5,
-      "texte": "Repas délicieux, cadre super sympa et gentillesse de Philippe... que demander de plus ?",
-      "auteur": "Deborah B.",
-      "date": "2026-06-04"
-    },
-    {
-      "note": 5,
-      "texte": "The food was so good it nearly made me cry. Philippe is the sweetest man and you can trust him 100% to choose the wine. May the culinary gods preserve this place",
-      "auteur": "Ke T.",
-      "date": "2026-05-29"
-    },
-    {
-      "note": 5,
-      "texte": "We rarely met an owner of a restaurant who is so welcoming and who controls everything. This, together with wonderfull food, makes this restaurant a place you can't miss.",
-      "auteur": "Eric J.",
-      "date": "2026-05-25"
-    },
-    {
-      "note": 5,
-      "texte": "Lieu chaleureux et authentique, super accueil et très bonne cuisine !",
-      "auteur": "Pauline B.",
-      "date": "2026-05-22"
-    },
-    {
-      "note": 5,
-      "texte": "S-U-P-E-R, endroit très cosy, nourriture excellente, Philippe le gérant est conviviale et très sympathique : je recommande les yeux fermés.",
-      "auteur": "Grégoire P.",
-      "date": "2026-05-20"
     }
   ]
 }
