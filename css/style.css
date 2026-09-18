@@ -117,7 +117,7 @@ nav a:hover, nav a.active { color: var(--terracotta); }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 92vh;
+  min-height: 72vh;
   display: flex;
   align-items: center;
   justify-content: center;
