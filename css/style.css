@@ -281,7 +281,7 @@ section { padding: 5rem 1.5rem; }
 .split-photos > img, .split-photos > .split-stack { width: 100%; display: block; }
 .split-photos img { height: auto; display: block; }
 .split-photos .photo-a { grid-column: span 3; }
-.split-photos .photo-b { grid-column: span 2; align-self: start; }
+.split-photos .photo-b { grid-column: span 2; align-self: start; aspect-ratio: 5 / 8; object-fit: cover; }
 .split-photos .split-stack { grid-column: span 2; display: grid; gap: 1rem; }
 .split-photos .split-stack img { aspect-ratio: 1 / 1; object-fit: cover; }
 .split-photos .photo-d { grid-column: span 3; }
