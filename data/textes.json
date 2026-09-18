@@ -93,6 +93,14 @@
     "nl": "Voor koffieliefhebbers serveert Franquette specialty koffie van &Iuml;ota, gebrand door Maxime Henneux in Gordes, in de Luberon. En voor alle anderen: matcha, muntthee, sap van de dag&hellip;",
     "it": "Per gli amanti del caffè, Franquette serve il caffè speciale &Iuml;ota, tostato da Maxime Henneux a Gordes, nel Luberon. E per tutti gli altri: matcha, tè alla menta, succo del giorno&hellip;"
   },
+  "cafe.presentation_p2": {
+    "label": "Café — présentation, 2e paragraphe",
+    "fr": "Cookies, cakes et toasts, du petit-déjeuner au goûter. Et à midi, nos ravioles safranées&nbsp;: la spécialité de Franquette depuis 2019&nbsp;!",
+    "en": "Cookies, cakes and toasts, from breakfast to afternoon snack. And at lunchtime, our saffron ravioles: Franquette&rsquo;s signature dish since 2019!",
+    "de": "Cookies, Kuchen und Toasts, vom Frühstück bis zum Nachmittagssnack. Und mittags unsere Safran-Ravioli: die Spezialität von Franquette seit 2019!",
+    "nl": "Cookies, cakes en toasts, van ontbijt tot vieruurtje. En &rsquo;s middags onze saffraanravioli: de specialiteit van Franquette sinds 2019!",
+    "it": "Cookies, cake e toast, dalla colazione alla merenda. E a pranzo, i nostri ravioli allo zafferano: la specialità di Franquette dal 2019!"
+  },
   "restaurant.tagline": {
     "label": "Restaurant — sous-titre de la photo",
     "fr": "Tapas à la française &middot; vins nature &amp; orange<br>Mardi&ndash;samedi &agrave; partir de 19h30",

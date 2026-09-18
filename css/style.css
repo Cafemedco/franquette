@@ -60,9 +60,9 @@ header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(255, 253, 250, 0.95);
+  background: rgba(217, 192, 156, 0.95);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--sable);
+  border-bottom: 1px solid rgba(180, 150, 108, 0.4);
 }
 
 .header-inner {
