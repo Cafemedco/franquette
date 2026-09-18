@@ -267,6 +267,9 @@ section { padding: 5rem 1.5rem; }
 
 .split img { border-radius: 6px; }
 
+.split-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.split-photos img { width: 100%; height: 100%; object-fit: cover; }
+
 .split h2 { font-size: 1.4rem; margin-bottom: 1rem; }
 
 .split p { margin-bottom: 1rem; color: #3a3a3a; }
