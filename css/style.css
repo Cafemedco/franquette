@@ -297,6 +297,7 @@ section { padding: 5rem 1.5rem; }
 
 .menu-item .desc {
   font-size: 0.85rem;
+  font-weight: 400;
   color: #6b6b6b;
   font-style: italic;
   margin-top: 0.15rem;
