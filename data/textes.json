@@ -77,8 +77,8 @@
   },
   "cafe.tagline": {
     "label": "Café — sous-titre de la photo",
-    "fr": "Coffee shop méditerranéen &middot; mardi&ndash;vendredi 8h30&ndash;17h30<br>Samedi &amp; dimanche 10h&ndash;17h",
-    "en": "Mediterranean coffee shop &middot; Tuesday&ndash;Friday 8:30am&ndash;5:30pm<br>Saturday &amp; Sunday 10am&ndash;5pm"
+    "fr": "Mardi&ndash;vendredi 8h30&ndash;17h30<br>Samedi &amp; dimanche 10h&ndash;17h",
+    "en": "Tuesday&ndash;Friday 8:30am&ndash;5:30pm<br>Saturday &amp; Sunday 10am&ndash;5pm"
   },
   "cafe.presentation_titre": {
     "label": "Café — titre de présentation",
