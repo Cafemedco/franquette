@@ -356,19 +356,13 @@ details.wine-cat[open] summary { margin-bottom: 0.8rem; }
 .boutique-collage {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 90px;
-  gap: 0;
+  gap: 1rem;
   margin-top: 2.5rem;
+  align-items: end;
 }
-.boutique-collage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+.boutique-collage > img, .boutique-collage > .collage-stack { width: 100%; display: block; }
+.boutique-collage img { height: auto; display: block; }
 .boutique-collage .collage-text {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -378,21 +372,23 @@ details.wine-cat[open] summary { margin-bottom: 0.8rem; }
   font-size: clamp(1rem, 1.6vw, 1.35rem);
   font-weight: 300;
   letter-spacing: 0.06em;
-  padding: 1.5rem;
+  padding: 2.5rem 1.5rem;
   line-height: 1.4;
 }
-.boutique-collage img:nth-child(1) { grid-column: span 4; grid-row: span 4; }
-.boutique-collage img:nth-child(2) { grid-column: span 2; grid-row: span 2; }
-.boutique-collage img:nth-child(3) { grid-column: span 2; grid-row: span 2; }
-.boutique-collage img:nth-child(4) { grid-column: span 3; grid-row: span 3; }
-.boutique-collage img:nth-child(5) { grid-column: span 3; grid-row: span 3; }
-.boutique-collage .collage-text:nth-child(6) { grid-column: span 6; grid-row: span 2; }
+.boutique-collage .photo-1 { grid-column: span 4; }
+.boutique-collage .collage-stack { grid-column: span 2; display: grid; gap: 1rem; }
+.boutique-collage .collage-stack img { aspect-ratio: 0.664; object-fit: cover; }
+.boutique-collage .photo-4 { grid-column: span 3; }
+.boutique-collage .photo-5 { grid-column: span 3; }
+.boutique-collage .collage-text { grid-column: span 6; }
 
 @media (max-width: 640px) {
-  .boutique-collage { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
-  .boutique-collage img,
-  .boutique-collage .collage-text { grid-column: span 1 !important; grid-row: span 2 !important; }
-  .boutique-collage .collage-text:nth-child(6) { grid-column: span 2 !important; grid-row: span 1 !important; }
+  .boutique-collage { grid-template-columns: repeat(2, 1fr); }
+  .boutique-collage .photo-1,
+  .boutique-collage .collage-stack,
+  .boutique-collage .photo-4,
+  .boutique-collage .photo-5 { grid-column: span 1; }
+  .boutique-collage .collage-text { grid-column: span 2; }
 }
 
 /* ---------- Infos pratiques ---------- */
