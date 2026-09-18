@@ -570,6 +570,20 @@ footer .legal a { color: inherit; }
   margin: 0 auto;
 }
 
+/* Variante masonry : colonnes indépendantes, sans écart forcé entre colonnes de hauteurs différentes */
+.carte-grid--masonry {
+  display: block;
+  column-count: 2;
+  column-gap: 3rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.carte-grid--masonry .carte-col {
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+}
+
 .carte-col { margin-bottom: 2rem; }
 
 .carte-col h3 {
