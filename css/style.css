@@ -267,6 +267,10 @@ section { padding: 5rem 1.5rem; }
 
 .split img { border-radius: 6px; }
 
+.text-block { max-width: 700px; margin: 0 auto; }
+.text-block h2 { font-size: 1.4rem; margin-bottom: 1rem; }
+.text-block p { margin-bottom: 1rem; color: #3a3a3a; }
+
 .split-photos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; align-items: end; }
 .split-photos img { width: 100%; height: auto; display: block; }
 .split-photos img:nth-child(1) { grid-column: span 3; }
