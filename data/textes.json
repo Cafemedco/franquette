@@ -86,14 +86,12 @@
     "en": "Sunshine at the counter"
   },
   "cafe.presentation_p1": {
-    "label": "Café — présentation, 1er paragraphe",
-    "fr": "La journée, Franquette devient un coffee shop aux accents méditerranéens. Des cafés de qualité, en grains sélectionnés auprès de torréfacteurs de renom, préparés avec soin&nbsp;: espresso, latte, cappuccino, flat white.",
-    "en": "By day, Franquette becomes a coffee shop with Mediterranean accents. Quality coffees, beans selected from renowned roasters, brewed with care: espresso, latte, cappuccino, flat white."
-  },
-  "cafe.presentation_p2": {
-    "label": "Café — présentation, 2e paragraphe",
-    "fr": "Pour les becs verts et sucrés&nbsp;: matcha, sodas artisanaux UMA, et une carte salée-sucrée à grignoter à toute heure, entre focaccia, douceurs et fruits gorgés de soleil.",
-    "en": "For green and sweet tooths: matcha, UMA craft sodas, and a sweet-and-savoury snacking menu to enjoy at any hour — focaccia, treats and sun-drenched fruit."
+    "label": "Café — présentation",
+    "fr": "Pour les amateurs de café, Franquette sert le café de spécialité &Iuml;ota, torréfié par Maxime Henneux à Gordes, dans le Luberon. Et pour tous les autres&nbsp;: matcha, thé à la menthe, jus du jour&hellip;",
+    "en": "For coffee lovers, Franquette serves &Iuml;ota specialty coffee, roasted by Maxime Henneux in Gordes, in the Luberon. And for everyone else: matcha, mint tea, juice of the day&hellip;",
+    "de": "Für Kaffeeliebhaber serviert Franquette den Spezialitätenkaffee &Iuml;ota, geröstet von Maxime Henneux in Gordes, im Luberon. Und für alle anderen: Matcha, Pfefferminztee, Saft des Tages&hellip;",
+    "nl": "Voor koffieliefhebbers serveert Franquette specialty koffie van &Iuml;ota, gebrand door Maxime Henneux in Gordes, in de Luberon. En voor alle anderen: matcha, muntthee, sap van de dag&hellip;",
+    "it": "Per gli amanti del caffè, Franquette serve il caffè speciale &Iuml;ota, tostato da Maxime Henneux a Gordes, nel Luberon. E per tutti gli altri: matcha, tè alla menta, succo del giorno&hellip;"
   },
   "restaurant.tagline": {
     "label": "Restaurant — sous-titre de la photo",
