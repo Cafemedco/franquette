@@ -137,9 +137,9 @@
     const img = a.image
       ? '<img src="' + esc(ROOT + '/' + a.image) + '" alt="" loading="lazy">'
       : '';
-    const lienTxt = (k) => (LANG === 'fr' ? a[k] : (a[k + '_' + LANG] || a[k + '_en'])) || UI.lire;
-    const mkLien = (href, k) => '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + esc(lienTxt(k)) + ' →</a>';
-    const lien = (a.lien ? mkLien(a.lien, 'lien_texte') : '') + (a.lien2 ? ' &nbsp; ' + mkLien(a.lien2, 'lien2_texte') : '');
+    const lien = a.lien
+      ? '<a href="' + esc(a.lien) + '" target="_blank" rel="noopener">' + esc((LANG === 'fr' && a.lien_texte) || UI.lire) + ' →</a>'
+      : '';
     return '<article class="actu-card">' + img +
       '<div class="actu-body"><p class="actu-date">' + esc(dateTxt(a.date)) + '</p>' +
       '<h3>' + esc(L(a, 'titre')) + '</h3>' +
