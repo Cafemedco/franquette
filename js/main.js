@@ -12,6 +12,28 @@ if (burger && navList) {
   });
 }
 
+// Animation du bandeau au défilement : le texte glisse et s'efface, la photo se décale doucement
+const heroEl = document.querySelector('.hero');
+if (heroEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const heroContent = heroEl.querySelector('.hero-content');
+  let heroTicking = false;
+  const updateHero = () => {
+    const h = heroEl.offsetHeight || 1;
+    const y = Math.min(window.scrollY, h);
+    const p = y / h;
+    heroEl.style.backgroundPosition = 'center ' + (50 + p * 50) + '%';
+    if (heroContent) {
+      heroContent.style.transform = 'translateY(' + (y * 0.3) + 'px)';
+      heroContent.style.opacity = String(Math.max(0, 1 - p * 1.3));
+    }
+    heroTicking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!heroTicking) { heroTicking = true; requestAnimationFrame(updateHero); }
+  }, { passive: true });
+  updateHero();
+}
+
 // Apparition en douceur des sections au défilement
 const revealTargets = document.querySelectorAll('section:not(.hero)');
 if (revealTargets.length && 'IntersectionObserver' in window) {
