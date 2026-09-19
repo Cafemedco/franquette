@@ -367,8 +367,8 @@ details.wine-cat[open] summary { margin-bottom: 0.8rem; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: var(--bleu, #4A3A2F);
-  color: #fff;
+  background: #D9C09C;
+  color: var(--encre);
   font-size: clamp(1rem, 1.6vw, 1.35rem);
   font-weight: 300;
   letter-spacing: 0.06em;
