@@ -742,22 +742,17 @@ footer .legal a { color: inherit; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
-/* ---------- Fiches contact (restaurant rouge / café vert) ---------- */
-.contact-fiches-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-.contact-fiche {
-  padding: 2.2rem 2rem;
-  border-radius: 6px;
-  color: var(--creme);
-  text-align: center;
-}
-.contact-fiche.resto { background: #8A2937; }
-.contact-fiche.cafe { background: #49522F; }
-.contact-fiche h3 { color: var(--creme); font-size: 1.25rem; margin-bottom: 1.2rem; }
-.contact-fiche h4 { color: var(--creme); opacity: .75; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; margin: 1.1rem 0 .3rem; font-weight: 500; }
-.contact-fiche p { color: var(--creme); margin: 0; }
-.contact-fiche a { color: var(--creme); text-decoration: underline; }
-@media (max-width: 720px) { .contact-fiches-grid { grid-template-columns: 1fr; } }
+/* ---------- Bandeaux contact (restaurant rouge / café vert) ---------- */
+.contact-band { color: var(--creme); text-align: center; }
+.contact-band.resto { background: #8A2937; }
+.contact-band.cafe { background: #49522F; }
+.contact-band h2 { color: var(--creme); font-size: 1.4rem; margin-bottom: 1.5rem; }
+.contact-band-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.8rem; }
+.contact-band h4 { color: var(--creme); opacity: .75; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 .5rem; font-weight: 500; }
+.contact-band p { color: var(--creme); margin: 0; }
+.contact-band a { color: var(--creme); text-decoration: underline; }
+
+/* Galerie « Quelques assiettes » : 3 photos identiques, plus grandes */
+.assiettes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; max-width: 1300px; margin: 0 auto; }
+.assiettes-grid img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; display: block; }
+@media (max-width: 800px) { .assiettes-grid { grid-template-columns: 1fr; } }

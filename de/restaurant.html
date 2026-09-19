@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="stylesheet" href="../css/style.css?v=8">
+  <link rel="stylesheet" href="../css/style.css?v=9">
 </head>
 <body class="theme-resto">
 
@@ -117,13 +117,13 @@
 </section>
 
 <section class="menu-section">
-  <div class="container">
+  <div class="container" style="max-width:1400px;">
     <h2 class="section-title">Ein paar Gerichte</h2>
     <hr class="divider">
-    <div class="actus-grid">
-      <img src="../img/resto-assiette-chou-fleur.jpg" alt="Blumenkohl auf drei Arten, Blumenkohlpüree mit Tahini, gerösteter Blumenkohl, Blumenkohl-Taboulé" style="border-radius:6px;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;">
-      <img src="../img/resto-assiette-ravioles-3.jpg" alt="Gratinierte Safran-Ravioli, die Spezialität von Franquette" style="border-radius:6px;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;">
-      <img src="../img/resto-assiette-chocolat.jpg" alt="Schokoladen-Kaffee-Entremet in Form einer Kakaoschote" style="border-radius:6px;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;">
+    <div class="assiettes-grid">
+      <img src="../img/resto-assiette-chou-fleur.jpg" alt="Blumenkohl auf drei Arten, Blumenkohlpüree mit Tahini, gerösteter Blumenkohl, Blumenkohl-Taboulé">
+      <img src="../img/resto-assiette-ravioles-3.jpg" alt="Gratinierte Safran-Ravioli, die Spezialität von Franquette">
+      <img src="../img/resto-assiette-chocolat.jpg" alt="Schokoladen-Kaffee-Entremet in Form einer Kakaoschote">
     </div>
   </div>
 </section>
@@ -135,37 +135,20 @@
   </div>
 </section>
 
-<section class="contact-fiches">
+<section class="contact-band resto">
   <div class="container">
-    <h2 class="section-title">Kontakt</h2>
-    <hr class="divider">
-    <div class="contact-fiches-grid">
-      <div class="contact-fiche resto">
-        <h3>Restaurant</h3>
-        <h4>Adresse</h4>
-        <p>8 rue des Dames<br>75017 Paris<br><a href="https://www.google.com/maps/place/?q=place_id:ChIJY0g8FU1u5kcRt07KK3BHrF8" target="_blank" rel="noopener">Anfahrt</a></p>
-        <h4>Öffnungszeiten</h4>
-        <p data-bind-html="horaires.restaurant_de">Dienstag &ndash; Samstag<br>Ab 19:30 Uhr</p>
-        <h4>Reservierung</h4>
-        <p><a class="tel-fixe" href="tel:+33623828221">+33 6 23 82 82 21</a><br><a href="https://restaurantfranquette.fr/en/booking" target="_blank" rel="noopener">Online reservieren</a></p>
-        <h4>E-Mail</h4>
-        <p><a class="email-fixe" href="mailto:restaurantfranquette@gmail.com">restaurantfranquette@gmail.com</a></p>
-        <h4>Instagram</h4>
-        <p><a href="https://www.instagram.com/franquette_paris/" target="_blank" rel="noopener">@franquette_paris</a></p>
-      </div>
-      <div class="contact-fiche cafe">
-        <h3>Coffee Shop</h3>
-        <h4>Adresse</h4>
-        <p>8 rue des Dames<br>75017 Paris<br><a href="https://www.google.com/maps/place/?q=place_id:ChIJY0g8FU1u5kcRt07KK3BHrF8" target="_blank" rel="noopener">Anfahrt</a></p>
-        <h4>Öffnungszeiten</h4>
-        <p data-bind-html="horaires.cafe_de">Dienstag &ndash; Freitag 8:30 &ndash; 17:30 Uhr<br>Samstag &amp; Sonntag 10 &ndash; 17 Uhr</p>
-        <h4>Telefon</h4>
-        <p><a class="tel-fixe" href="tel:+33780860830">+33 7 80 86 08 30</a></p>
-        <h4>E-Mail</h4>
-        <p><a class="email-fixe" href="mailto:cafemedco@gmail.com">cafemedco@gmail.com</a></p>
-        <h4>Instagram</h4>
-        <p><a href="https://www.instagram.com/franquette_cafe/" target="_blank" rel="noopener">@franquette_cafe</a></p>
-      </div>
+    <h2>Restaurant</h2>
+    <div class="contact-band-grid">
+      <div><h4>Adresse</h4>
+        <p>8 rue des Dames<br>75017 Paris<br><a href="https://www.google.com/maps/place/?q=place_id:ChIJY0g8FU1u5kcRt07KK3BHrF8" target="_blank" rel="noopener">Anfahrt</a></p></div>
+      <div><h4>Öffnungszeiten</h4>
+        <p data-bind-html="horaires.restaurant_de">Dienstag &ndash; Samstag<br>Ab 19:30 Uhr</p></div>
+      <div><h4>Reservierung</h4>
+        <p><a class="tel-fixe" href="tel:+33623828221">+33 6 23 82 82 21</a><br><a href="https://restaurantfranquette.fr/en/booking" target="_blank" rel="noopener">Online reservieren</a></p></div>
+      <div><h4>E-Mail</h4>
+        <p><a class="email-fixe" href="mailto:restaurantfranquette@gmail.com">restaurantfranquette@gmail.com</a></p></div>
+      <div><h4>Instagram</h4>
+        <p><a href="https://www.instagram.com/franquette_paris/" target="_blank" rel="noopener">@franquette_paris</a></p></div>
     </div>
   </div>
 </section>
