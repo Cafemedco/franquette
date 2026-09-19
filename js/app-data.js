@@ -39,7 +39,7 @@
 
   // ---------- Infos pratiques (site.json) ----------
   getJSON('data/site.json').then((site) => {
-    document.querySelectorAll('a[href^="tel:"]').forEach((a) => {
+    document.querySelectorAll('a[href^="tel:"]:not(.tel-fixe)').forEach((a) => {
       a.href = site.contact.tel_href;
       if (/\d/.test(a.textContent)) a.textContent = site.contact.telephone;
     });

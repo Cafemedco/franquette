@@ -438,24 +438,24 @@ details.wine-cat[open] summary { margin-bottom: 0.8rem; }
 
 /* ---------- Footer ---------- */
 footer {
-  background: #241C15;
-  color: rgba(251, 246, 238, 0.85);
+  background: #D9C09C;
+  color: var(--encre);
   padding: 3rem 1.5rem 2rem;
   text-align: center;
   font-size: 0.85rem;
 }
 
 footer .logo { margin: 0 auto 1rem; width: fit-content; }
-footer .logo img { filter: invert(1) brightness(1.05); height: 84px; }
+footer .logo img { height: 84px; }
 
 footer nav ul { justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
 
-footer nav a { color: rgba(255, 253, 250, 0.85); }
+footer nav a { color: var(--encre); }
 
 .socials { margin-bottom: 1.5rem; }
 
 .socials a {
-  color: var(--creme);
+  color: var(--encre);
   margin: 0 0.6rem;
   font-size: 0.85rem;
   letter-spacing: 0.1em;
