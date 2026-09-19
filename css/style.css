@@ -741,3 +741,23 @@ footer .legal a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ---------- Fiches contact (restaurant rouge / café vert) ---------- */
+.contact-fiches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.contact-fiche {
+  padding: 2.2rem 2rem;
+  border-radius: 6px;
+  color: var(--creme);
+  text-align: center;
+}
+.contact-fiche.resto { background: #8A2937; }
+.contact-fiche.cafe { background: #49522F; }
+.contact-fiche h3 { color: var(--creme); font-size: 1.25rem; margin-bottom: 1.2rem; }
+.contact-fiche h4 { color: var(--creme); opacity: .75; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; margin: 1.1rem 0 .3rem; font-weight: 500; }
+.contact-fiche p { color: var(--creme); margin: 0; }
+.contact-fiche a { color: var(--creme); text-decoration: underline; }
+@media (max-width: 720px) { .contact-fiches-grid { grid-template-columns: 1fr; } }
