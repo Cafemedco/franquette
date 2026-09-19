@@ -11,6 +11,17 @@
     "lien_texte": "Voir le compte"
   },
   {
+    "id": "suivez-restaurant-instagram",
+    "date": "2026-09-12",
+    "titre": "Suivez Franquette Restaurant sur Instagram",
+    "titre_en": "Follow Franquette Restaurant on Instagram",
+    "texte": "Suivez Franquette Restaurant sur Instagram pour ne rien manquer : nouveautés de la carte, assiettes du moment et coulisses de la cuisine.",
+    "texte_en": "Follow Franquette Restaurant on Instagram so you don't miss a thing: new menu items, current dishes and behind the scenes in the kitchen.",
+    "image": null,
+    "lien": "https://www.instagram.com/franquette_paris/",
+    "lien_texte": "Voir le compte"
+  },
+  {
     "id": "ouverture-cafe",
     "date": "2026-09-08",
     "titre": "Ouverture de Franquette Café",
