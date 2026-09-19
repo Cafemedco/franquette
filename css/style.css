@@ -418,11 +418,12 @@ details.wine-cat[open] summary { margin-bottom: 0.8rem; }
 /* ---------- Bandeau CTA ---------- */
 .cta-band {
   text-align: center;
-  background: var(--terracotta);
-  color: var(--creme);
+  background: #D9C09C;
+  color: var(--encre);
 }
 
-.cta-band h2 { color: var(--creme); font-size: 1.4rem; margin-bottom: 1.5rem; }
+.cta-band h2 { color: var(--encre); font-size: 1.4rem; margin-bottom: 1.5rem; }
+.cta-band .btn:hover { background: var(--encre); color: #D9C09C; border-color: var(--encre); }
 
 /* ---------- Notice "à venir" ---------- */
 .notice {
