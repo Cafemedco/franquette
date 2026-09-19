@@ -14,7 +14,12 @@
     "cafe_it": "Martedì &ndash; venerdì 8:30 &ndash; 17:30<br>Sabato &amp; domenica 10 &ndash; 17",
     "restaurant_de": "Dienstag &ndash; Samstag<br>Ab 19:30 Uhr",
     "restaurant_nl": "Dinsdag &ndash; zaterdag<br>Vanaf 19.30 uur",
-    "restaurant_it": "Marted&igrave; &ndash; sabato<br>Dalle 19:30"
+    "restaurant_it": "Marted&igrave; &ndash; sabato<br>Dalle 19:30",
+    "cafe_court_fr": "Mar&ndash;ven 8h30&ndash;17h30<br>Sam&ndash;dim 10h&ndash;17h",
+    "cafe_court_en": "Tue&ndash;Fri 8:30am&ndash;5:30pm<br>Sat&ndash;Sun 10am&ndash;5pm",
+    "cafe_court_de": "Di&ndash;Fr 8:30&ndash;17:30 Uhr<br>Sa&ndash;So 10&ndash;17 Uhr",
+    "cafe_court_nl": "Di&ndash;vr 8.30&ndash;17.30 uur<br>Za&ndash;zo 10&ndash;17 uur",
+    "cafe_court_it": "Mar&ndash;ven 8:30&ndash;17:30<br>Sab&ndash;dom 10&ndash;17"
   },
   "liens": {
     "reservation": "https://www.google.com/maps/reserve/v/dine/c/2s6eGiaiaBQ?hl=fr-FR",
