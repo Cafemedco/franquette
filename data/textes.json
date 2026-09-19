@@ -87,11 +87,11 @@
   },
   "cafe.presentation_p1": {
     "label": "Café — présentation",
-    "fr": "Pour les amateurs de café, Franquette sert le café de spécialité &Iuml;ota, torréfié par Maxime Henneux à Gordes, dans le Luberon. Et pour tous les autres&nbsp;: matcha, thé à la menthe, jus du jour&hellip;",
-    "en": "For coffee lovers, Franquette serves &Iuml;ota specialty coffee, roasted by Maxime Henneux in Gordes, in the Luberon. And for everyone else: matcha, mint tea, juice of the day&hellip;",
-    "de": "Für Kaffeeliebhaber serviert Franquette den Spezialitätenkaffee &Iuml;ota, geröstet von Maxime Henneux in Gordes, im Luberon. Und für alle anderen: Matcha, Pfefferminztee, Saft des Tages&hellip;",
-    "nl": "Voor koffieliefhebbers serveert Franquette specialty koffie van &Iuml;ota, gebrand door Maxime Henneux in Gordes, in de Luberon. En voor alle anderen: matcha, muntthee, sap van de dag&hellip;",
-    "it": "Per gli amanti del caffè, Franquette serve il caffè speciale &Iuml;ota, tostato da Maxime Henneux a Gordes, nel Luberon. E per tutti gli altri: matcha, tè alla menta, succo del giorno&hellip;"
+    "fr": "Pour les amateurs de café, Franquette sert le café de spécialité, torréfié par &Iuml;ota à Gordes, dans le Luberon. Et pour tous les autres&nbsp;: matcha, thé à la menthe, jus du jour&hellip;",
+    "en": "For coffee lovers, Franquette serves specialty coffee, roasted by &Iuml;ota in Gordes, in the Luberon. And for everyone else: matcha, mint tea, juice of the day&hellip;",
+    "de": "Für Kaffeeliebhaber serviert Franquette den Spezialitätenkaffee, geröstet von &Iuml;ota in Gordes, im Luberon. Und für alle anderen: Matcha, Pfefferminztee, Saft des Tages&hellip;",
+    "nl": "Voor koffieliefhebbers serveert Franquette specialty koffie, gebrand door &Iuml;ota in Gordes, in de Luberon. En voor alle anderen: matcha, muntthee, sap van de dag&hellip;",
+    "it": "Per gli amanti del caffè, Franquette serve il caffè speciale, tostato da &Iuml;ota a Gordes, nel Luberon. E per tutti gli altri: matcha, tè alla menta, succo del giorno&hellip;"
   },
   "cafe.presentation_p2": {
     "label": "Café — présentation, 2e paragraphe",
