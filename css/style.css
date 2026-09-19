@@ -739,8 +739,12 @@ footer .legal a { color: inherit; }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.in-view { opacity: 1; transform: none; }
 
+.rv-item { opacity: 0; transform: translateY(16px); transition: opacity .7s ease var(--rv-delay, 0ms), transform .7s ease var(--rv-delay, 0ms); }
+img.rv-item { transform: translateY(16px) scale(.985); }
+hr.divider.rv-item { transform: scaleX(0); transform-origin: center; }
+.rv-item.rv-in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal, .rv-item { opacity: 1; transform: none; transition: none; }
 }
 
 /* ---------- Bandeaux contact (restaurant rouge / café vert) ---------- */

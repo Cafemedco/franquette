@@ -49,6 +49,31 @@ if (revealTargets.length && 'IntersectionObserver' in window) {
   revealTargets.forEach((el) => revealObserver.observe(el));
 }
 
+// Apparition échelonnée des éléments (photos, cartes, plats, séparateurs)
+const itemSel = 'section:not(.hero) img, section:not(.hero) .menu-item, section:not(.hero) .contact-band-grid > div, section:not(.hero) .infos-grid > div, section:not(.hero) .actu-card, section:not(.hero) hr.divider';
+function revealItems(root) {
+  if (!('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('rv-in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+  root.querySelectorAll(itemSel).forEach((el) => {
+    if (el.classList.contains('rv-item')) return;
+    el.classList.add('rv-item');
+    const sibs = el.parentElement ? [...el.parentElement.children] : [];
+    el.style.setProperty('--rv-delay', Math.min(sibs.indexOf(el), 5) * 90 + 'ms');
+    io.observe(el);
+  });
+}
+revealItems(document);
+let rvTimer;
+new MutationObserver(() => { clearTimeout(rvTimer); rvTimer = setTimeout(() => revealItems(document), 80); })
+  .observe(document.body, { childList: true, subtree: true });
+
 // Onglets de carte (café) : un clic par catégorie
 document.querySelectorAll('.carte-tabs').forEach((tabs) => {
   tabs.addEventListener('click', (e) => {
