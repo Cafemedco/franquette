@@ -1,11 +1,33 @@
 [
   {
+    "id": "suivez-cafe-instagram",
+    "date": "2026-09-15",
+    "titre": "Suivez Franquette Café sur Instagram",
+    "titre_en": "Follow Franquette Café on Instagram",
+    "texte": "Suivez Franquette Café sur Instagram pour ne rien manquer : nouveautés de la carte, douceurs du jour et coulisses du coffee shop.",
+    "texte_en": "Follow Franquette Café on Instagram so you don't miss a thing: new menu items, treats of the day and behind the scenes at the coffee shop.",
+    "image": null,
+    "lien": "https://www.instagram.com/franquette_cafe/",
+    "lien_texte": "Voir le compte"
+  },
+  {
     "id": "ouverture-cafe",
-    "date": "2026-07-01",
-    "titre": "Franquette Café ouvre ses portes",
+    "date": "2026-09-08",
+    "titre": "Ouverture de Franquette Café",
     "titre_en": "Franquette Café is now open",
-    "texte": "Dès 9h, retrouvez nos cafés de spécialité, le matcha et les sodas UMA au 8 rue des Dames. L'esprit méditerranéen s'installe aux Batignolles.",
-    "texte_en": "From 9am, enjoy our specialty coffees, matcha and UMA sodas at 8 rue des Dames. The Mediterranean spirit has arrived in Batignolles.",
+    "texte": "Pour les amateurs de café, Franquette sert le café de spécialité Ïota, torréfié par Maxime Henneux à Gordes, dans le Luberon. Et pour tous les autres : matcha, thé à la menthe, jus du jour… Cookies, cakes et toasts, du petit-déjeuner au goûter. Et à midi, nos ravioles safranées : la spécialité de Franquette depuis 2019 !",
+    "texte_en": "For coffee lovers, Franquette serves Ïota specialty coffee, roasted by Maxime Henneux in Gordes, in the Luberon. And for everyone else: matcha, mint tea, juice of the day… Cookies, cakes and toasts, from breakfast to afternoon snack. And at lunchtime, our saffron ravioles: Franquette's signature dish since 2019!",
+    "image": null,
+    "lien": null,
+    "lien_texte": null
+  },
+  {
+    "id": "arrivee-chef-jacques",
+    "date": "2026-09-01",
+    "titre": "Arrivée du nouveau chef Jacques",
+    "titre_en": "New chef Jacques joins the kitchen",
+    "texte": "En cuisine, c'est chef Jacques, qui nous revient des Amériques ! Chef et patron du Jac Bistro à São Paulo, il amène une touche brésilienne à la cuisine de Franquette : des assiettes à partager aux accents cosmopolites, avec des produits bons, propres et justes. Ami de Philippe depuis très très longtemps, il prend les fourneaux dès aujourd'hui.",
+    "texte_en": "In the kitchen, it's chef Jacques, back from the Americas! Chef and owner of Jac Bistro in São Paulo, he brings a Brazilian touch to Franquette's cooking: cosmopolitan sharing plates made with good, clean and fair products. A very old friend of Philippe's, he takes over the stoves today.",
     "image": null,
     "lien": null,
     "lien_texte": null
@@ -31,16 +53,5 @@
     "image": null,
     "lien": "https://www.lemonde.fr/le-monde-passe-a-table/article/2025/10/18/chez-franquette-a-paris-un-voyage-dans-l-assiette_6648022_6082232.html",
     "lien_texte": "Lire l'article du Monde"
-  },
-  {
-    "id": "suivez-nous-instagram",
-    "date": "2026-06-15",
-    "titre": "Suivez Franquette sur Instagram",
-    "titre_en": "Follow Franquette on Instagram",
-    "texte": "Les coulisses de la cuisine, les nouvelles cuvées de la cave et les pièces fraîchement sorties du four céramique : tout est sur notre compte.",
-    "texte_en": "Behind the scenes of the kitchen, new cuvées from the cellar and pieces fresh out of the ceramics kiln: it's all on our account.",
-    "image": null,
-    "lien": "https://www.instagram.com/franquette_cafe/",
-    "lien_texte": "Voir le compte"
   }
 ]
