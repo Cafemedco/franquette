@@ -103,8 +103,8 @@
   },
   "restaurant.tagline": {
     "label": "Restaurant — sous-titre de la photo",
-    "fr": "Tapas à la française &middot; vins nature &amp; orange<br>Mardi&ndash;samedi &agrave; partir de 19h30",
-    "en": "French tapas &middot; natural &amp; orange wines<br>Tuesday&ndash;Saturday from 7:30pm"
+    "fr": "Assiettes à partager &middot; vins nature &amp; orange<br>Mardi&ndash;samedi &agrave; partir de 19h30",
+    "en": "Sharing plates &middot; natural &amp; orange wines<br>Tuesday&ndash;Saturday from 7:30pm"
   },
   "restaurant.presentation_titre": {
     "label": "Restaurant — titre de présentation",
