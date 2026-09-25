@@ -48,8 +48,13 @@
       a.href = 'mailto:' + site.contact.email + suffix;
       if (a.textContent.includes('@')) a.textContent = site.contact.email;
     });
-    document.querySelectorAll('a[href*="restaurantfranquette.fr"]:not(#avis-source)').forEach((a) => { a.href = site.liens.reservation; });
+    // Bons cadeaux avant la réservation : un lien de réservation Uniiti ne doit pas être réécrit en bon cadeau.
     document.querySelectorAll('a[href*="uniiti.com"]:not(#avis-source)').forEach((a) => { a.href = site.liens.bons_cadeaux; });
+    document.querySelectorAll('a[href*="google.com/maps/reserve"]').forEach((a) => {
+      const u = new URL(site.liens.reservation);
+      if (/(^|\.)google\./.test(u.hostname)) u.searchParams.set('hl', LANG === 'fr' ? 'fr-FR' : LANG);
+      a.href = u.href;
+    });
     // Deux comptes Instagram : @franquette_cafe (coffee shop) et @franquette_paris (restaurant).
     // Chaque lien conserve le compte vers lequel il pointe déjà dans le HTML.
     document.querySelectorAll('a[href*="instagram.com"]').forEach((a) => {
