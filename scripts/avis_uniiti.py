@@ -5,10 +5,10 @@
 Lancé toutes les heures par .github/workflows/avis.yml.
 Bibliothèque standard uniquement : aucune dépendance à installer.
 
-- Note globale et nombre d'avis : page d'avis du site du restaurant.
+- Note globale et nombre d'avis : fiche Uniiti du restaurant (uniiti.com/shop/franquette).
 - Commentaires : l'adresse publique qu'utilise le bouton « Afficher plus d'avis »
   de la fiche Uniiti, lue page par page (10 avis par page) jusqu'à en avoir 15.
-  Si elle ne répond pas, repli sur les 10 avis de la page du restaurant.
+  Si elle ne répond pas, repli sur les avis affichés sur la fiche Uniiti.
 
 Garde-fous : si la page ne répond pas ou si son format a changé (note absente,
 aucun avis lisible…), le script s'arrête en erreur SANS toucher au fichier.
@@ -25,7 +25,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-PAGE_AVIS = "https://restaurantfranquette.fr/fr/opinions"
+PAGE_AVIS = "https://uniiti.com/shop/franquette"
 API_AVIS = "https://uniiti.com/api/opinion-request/shop/load-more-ureview-reviews"
 SHOP_ID = 764                      # identifiant Uniiti de Franquette (fiche uniiti.com/shop/franquette)
 SORTIE = Path(__file__).resolve().parent.parent / "data" / "avis.json"
@@ -37,7 +37,8 @@ UA = "Mozilla/5.0 (site Franquette ; mise a jour des avis)"
 def lire_page(chemin=None):
     if chemin:
         return Path(chemin).read_text(encoding="utf-8", errors="ignore")
-    req = urllib.request.Request(PAGE_AVIS, headers={"User-Agent": UA})
+    req = urllib.request.Request(PAGE_AVIS, headers={
+        "User-Agent": UA, "Accept": "text/html,application/xhtml+xml,*/*;q=0.8"})   # sans lui : 406
     with urllib.request.urlopen(req, timeout=30) as r:
         return r.read().decode("utf-8", errors="ignore")
 
@@ -76,34 +77,28 @@ def avis_ok(nom, note, corps, date):
             "date": f"{date.group(3)}-{date.group(2)}-{date.group(1)}" if date else None}
 
 
+def meta(page, prop):
+    """Valeur d'une balise <meta itemprop="…" content="…">, attributs dans n'importe quel ordre."""
+    for balise in re.findall(r"<meta\b[^>]*>", page):
+        if f'itemprop="{prop}"' in balise:
+            m = re.search(r'content="([^"]*)"', balise)
+            if m:
+                return m.group(1)
+    return None
+
+
 def note_globale(page):
-    i = page.find("avis sur Uniiti")
-    if i < 0:
-        raise ValueError("bloc « avis sur Uniiti » introuvable")
-    total = re.search(r"(\d[\d\s .]*)\s*avis sur Uniiti", page[max(0, i - 60):i + 20])
-    note = re.search(r"(\d[.,]\d)\s*/\s*5", page[i:i + 4000])
+    total, note = meta(page, "reviewCount"), meta(page, "ratingValue")
     if not total or not note:
-        raise ValueError("note globale ou nombre d'avis illisible")
-    nombre = int(re.sub(r"\D", "", total.group(1)))
-    moyenne = float(note.group(1).replace(",", "."))
+        raise ValueError("note globale ou nombre d'avis introuvable sur la fiche Uniiti")
+    try:
+        nombre = int(re.sub(r"\D", "", total))
+        moyenne = float(note.replace(",", "."))
+    except ValueError:
+        raise ValueError(f"note globale ou nombre d'avis illisible : {note!r}, {total!r}") from None
     if not (1 <= moyenne <= 5) or nombre <= 0:
         raise ValueError(f"valeurs incohérentes : {moyenne}/5, {nombre} avis")
     return moyenne, nombre
-
-
-def avis_page_restaurant(page):
-    """Les 10 avis affichés sur restaurantfranquette.fr (repli)."""
-    avis = []
-    for bloc in page.split('class="review-note"')[1:]:
-        m_nom = re.search(r"<p>\s*(.*?)\s+a not[ée]\s*</p>", bloc, re.S)
-        m_note = re.search(r"<span>\s*(\d)\s*/\s*5\s*</span>", bloc)
-        m_txt = re.search(r'class="note[^"]*">\s*<p>(.*?)</p>', bloc, re.S)
-        if m_nom and m_note:
-            a = avis_ok(texte(m_nom.group(1)), int(m_note.group(1)),
-                        texte(m_txt.group(1)) if m_txt else "", re.search(r"(\d{2})/(\d{2})/(\d{4})", bloc))
-            if a:
-                avis.append(a)
-    return avis
 
 
 def avis_fragment_uniiti(fragment):
@@ -145,11 +140,11 @@ def main():
         page = lire_page(test)
         moyenne, nombre = note_globale(page)
         try:
-            avis = avis_page_restaurant(page) if test else avis_recents()
+            avis = avis_fragment_uniiti(page) if test else avis_recents()
         except Exception as e:                        # noqa: BLE001
-            print(f"API Uniiti indisponible ({e}) : repli sur les avis de la page du restaurant.",
+            print(f"API Uniiti indisponible ({e}) : repli sur les avis de la fiche Uniiti.",
                   file=sys.stderr)
-            avis = avis_page_restaurant(page)
+            avis = avis_fragment_uniiti(page)
         if not avis:
             raise ValueError("aucun avis avec commentaire n'a pu être lu")
     except Exception as e:                            # noqa: BLE001 — on veut tout attraper
