@@ -2,9 +2,15 @@
   "source": "Uniiti",
   "source_url": "https://uniiti.com/shop/franquette",
   "note_moyenne": 4.9,
-  "nombre_avis": 1197,
-  "mis_a_jour": "2026-09-18T06:36:06Z",
+  "nombre_avis": 1198,
+  "mis_a_jour": "2026-09-29T23:29:21Z",
   "avis": [
+    {
+      "note": 4,
+      "texte": "Très satisfait de la saveur des plats. Certains plats mériteraient d'avantage d'accompagnement comme du riz par exemple.",
+      "auteur": "Guy B.",
+      "date": "2026-09-29"
+    },
     {
       "note": 5,
       "texte": "Repas exceptionnel et gérant hors du commun",
@@ -88,12 +94,6 @@
       "texte": "Lieu chaleureux et authentique, super accueil et très bonne cuisine !",
       "auteur": "Pauline B.",
       "date": "2026-05-22"
-    },
-    {
-      "note": 5,
-      "texte": "S-U-P-E-R, endroit très cosy, nourriture excellente, Philippe le gérant est conviviale et très sympathique : je recommande les yeux fermés.",
-      "auteur": "Grégoire P.",
-      "date": "2026-05-20"
     }
   ]
 }
