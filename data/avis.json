@@ -2,9 +2,15 @@
   "source": "Uniiti",
   "source_url": "https://uniiti.com/shop/franquette",
   "note_moyenne": 4.9,
-  "nombre_avis": 1199,
-  "mis_a_jour": "2026-10-06T16:36:53Z",
+  "nombre_avis": 1200,
+  "mis_a_jour": "2026-10-08T23:32:55Z",
   "avis": [
+    {
+      "note": 5,
+      "texte": "Tout le monde il est beau tout le monde il est gentil ! Bravo très bonne cuisine très bon accueil très bonne ambiance",
+      "auteur": "Max B.",
+      "date": "2026-10-08"
+    },
     {
       "note": 5,
       "texte": "A great restaurant with a delicious menu and very friendly owner/manager. Highly recommended fpr all aspects of dining out.",
@@ -88,12 +94,6 @@
       "texte": "The food was so good it nearly made me cry. Philippe is the sweetest man and you can trust him 100% to choose the wine. May the culinary gods preserve this place",
       "auteur": "Ke T.",
       "date": "2026-05-29"
-    },
-    {
-      "note": 5,
-      "texte": "We rarely met an owner of a restaurant who is so welcoming and who controls everything. This, together with wonderfull food, makes this restaurant a place you can't miss.",
-      "auteur": "Eric J.",
-      "date": "2026-05-25"
     }
   ]
 }
