@@ -627,6 +627,15 @@ footer .legal a { color: inherit; }
   flex-shrink: 0;
 }
 
+/* Café du moment, sous le titre « Espressos » (le texte change quand le café tourne) */
+.cafe-du-moment {
+  margin: -0.45rem 0 0.5rem calc(8px + 0.55rem);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--bleu-doux);
+}
+
 .carte-note {
   grid-column: 1 / -1;
   text-align: center;
@@ -701,6 +710,7 @@ footer .legal a { color: inherit; }
   section { padding: 3.5rem 1.2rem; }
 
   .carte-grid { grid-template-columns: 1fr; }
+  .carte-grid--masonry { column-count: 1; }
 }
 
 /* ---------- Badge « à venir » (rubriques désactivées) ---------- */
