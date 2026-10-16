@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="stylesheet" href="../css/style.css?v=17">
+  <link rel="stylesheet" href="../css/style.css?v=18">
 </head>
 <body class="theme-cafe">
 
@@ -187,19 +187,52 @@
       </div>
     </div>
     <div class="carte-pane hidden-pane" data-pane="brunch">
-      <div class="carte-grid">
-        <div class="carte-col">
-          <h3>Brunch in het weekend</h3>
-          <div class="menu-item"><span class="name">Brunchformule <span class="desc">— een warme drank, vers sap van de dag of huisgemaakte ijsthee, caponata of een granolabowl, avocadotoast (of ravioles +&euro;&nbsp;2,00)</span></span><span class="price">&euro;&nbsp;22,90</span></div>
-          <div class="menu-item"><span class="name">Losse mimosa</span><span class="price">&euro;&nbsp;8,00</span></div>
+      <div class="brunch">
+        <div class="brunch-top">
+          <div>
+            <h3>Brunchformule</h3>
+            <p class="brunch-quand">in het weekend</p>
+          </div>
+          <span class="price brunch-prix">&euro;&nbsp;22,90</span>
         </div>
-        <div class="carte-col">
-          <h3>Extra&rsquo;s</h3>
-          <div class="menu-item"><span class="name">Gerookte forel</span><span class="price">+&euro;&nbsp;2,00</span></div>
-          <div class="menu-item"><span class="name">Mimosa</span><span class="price">+&euro;&nbsp;2,00</span></div>
+        <ol class="brunch-etapes">
+          <li>
+            <div>
+              <p class="brunch-choix">Een warme drank</p>
+              <div class="ex">
+                <span class="ex-label">Bijvoorbeeld:</span>
+                <ul class="ex-defile" aria-label="Bijvoorbeeld">
+                <li>latte met havermelk</li>
+                <li>matcha latte met kokos</li>
+                <li>chai latte met amandel</li>
+                <li>ube latte</li>
+                <li>cappuccino</li>
+                <li>flat white</li>
+                <li>mocha</li>
+                <li>warme chocolademelk</li>
+                <li>batch brew</li>
+                <li>verse muntthee</li>
+                </ul>
+              </div>
+              <p class="brunch-lait">Melk naar keuze inbegrepen: koemelk, haver, amandel, soja of kokos</p>
+            </div>
+          </li>
+          <li><div><p class="brunch-choix">Vers sap van de dag of huisgemaakte ijsthee</p></div></li>
+          <li><div><p class="brunch-choix">Caponata of granolabowl</p></div></li>
+          <li><div><p class="brunch-choix">Avocadotoast <span class="brunch-opt">of ravioles <span class="price">+&euro;&nbsp;2,00</span></span></p></div></li>
+        </ol>
+        <div class="brunch-bas">
+          <div>
+            <h4>Extra&rsquo;s</h4>
+            <div class="menu-item"><span class="name">Gerookte forel</span><span class="price">+&euro;&nbsp;2,00</span></div>
+            <div class="menu-item"><span class="name">Mimosa</span><span class="price">+&euro;&nbsp;2,00</span></div>
+          </div>
+          <div>
+            <h4>Ook</h4>
+            <div class="menu-item"><span class="name">Losse mimosa</span><span class="price">&euro;&nbsp;8,00</span></div>
+          </div>
         </div>
       </div>
-      <p class="carte-note">Plantaardige melk inbegrepen bij de formule</p>
     </div>
   </div>
 </section>
@@ -239,7 +272,7 @@
   <p class="legal">&copy; 2026 Franquette &middot; 8 rue des Dames, 75017 Paris &middot; <a href="../mentions-legales.html">Juridische informatie</a> &middot; <a class="admin-link" href="../admin/">Beheer</a></p>
 </footer>
 
-<script src="../js/main.js?v=5"></script>
+<script src="../js/main.js?v=6"></script>
 <script src="../js/app-data.js?v=9"></script>
 </body>
 </html>

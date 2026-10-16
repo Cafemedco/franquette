@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="stylesheet" href="../css/style.css?v=17">
+  <link rel="stylesheet" href="../css/style.css?v=18">
 </head>
 <body class="theme-cafe">
 
@@ -187,19 +187,52 @@
       </div>
     </div>
     <div class="carte-pane hidden-pane" data-pane="brunch">
-      <div class="carte-grid">
-        <div class="carte-col">
-          <h3>Brunch nel weekend</h3>
-          <div class="menu-item"><span class="name">Formula brunch <span class="desc">— una bevanda calda, succo fresco del giorno o tè freddo della casa, caponata o granola bowl, toast all&rsquo;avocado (o ravioles +2,00&nbsp;€)</span></span><span class="price">22,90&nbsp;€</span></div>
-          <div class="menu-item"><span class="name">Mimosa da solo</span><span class="price">8,00&nbsp;€</span></div>
+      <div class="brunch">
+        <div class="brunch-top">
+          <div>
+            <h3>Formula brunch</h3>
+            <p class="brunch-quand">nel weekend</p>
+          </div>
+          <span class="price brunch-prix">22,90&nbsp;€</span>
         </div>
-        <div class="carte-col">
-          <h3>Supplementi</h3>
-          <div class="menu-item"><span class="name">Trota affumicata</span><span class="price">+2,00&nbsp;€</span></div>
-          <div class="menu-item"><span class="name">Mimosa</span><span class="price">+2,00&nbsp;€</span></div>
+        <ol class="brunch-etapes">
+          <li>
+            <div>
+              <p class="brunch-choix">Una bevanda calda</p>
+              <div class="ex">
+                <span class="ex-label">Per esempio:</span>
+                <ul class="ex-defile" aria-label="Per esempio">
+                <li>caffè latte all&rsquo;avena</li>
+                <li>matcha latte al cocco</li>
+                <li>chai latte alla mandorla</li>
+                <li>ube latte</li>
+                <li>cappuccino</li>
+                <li>flat white</li>
+                <li>mocha</li>
+                <li>cioccolata calda</li>
+                <li>batch brew</li>
+                <li>tè alla menta fresca</li>
+                </ul>
+              </div>
+              <p class="brunch-lait">Latte a scelta incluso: vaccino, avena, mandorla, soia o cocco</p>
+            </div>
+          </li>
+          <li><div><p class="brunch-choix">Succo fresco del giorno o tè freddo della casa</p></div></li>
+          <li><div><p class="brunch-choix">Caponata o granola bowl</p></div></li>
+          <li><div><p class="brunch-choix">Toast all&rsquo;avocado <span class="brunch-opt">o ravioles <span class="price">+2,00&nbsp;€</span></span></p></div></li>
+        </ol>
+        <div class="brunch-bas">
+          <div>
+            <h4>Supplementi</h4>
+            <div class="menu-item"><span class="name">Trota affumicata</span><span class="price">+2,00&nbsp;€</span></div>
+            <div class="menu-item"><span class="name">Mimosa</span><span class="price">+2,00&nbsp;€</span></div>
+          </div>
+          <div>
+            <h4>E anche</h4>
+            <div class="menu-item"><span class="name">Mimosa da solo</span><span class="price">8,00&nbsp;€</span></div>
+          </div>
         </div>
       </div>
-      <p class="carte-note">Latte vegetale incluso nella formula</p>
     </div>
   </div>
 </section>
@@ -239,7 +272,7 @@
   <p class="legal">&copy; 2026 Franquette &middot; 8 rue des Dames, 75017 Paris &middot; <a href="../mentions-legales.html">Note legali</a> &middot; <a class="admin-link" href="../admin/">Admin</a></p>
 </footer>
 
-<script src="../js/main.js?v=5"></script>
+<script src="../js/main.js?v=6"></script>
 <script src="../js/app-data.js?v=9"></script>
 </body>
 </html>

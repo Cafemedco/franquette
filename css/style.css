@@ -721,6 +721,109 @@ footer .legal a { color: inherit; }
 .carte-pane { animation: fadein 0.3s ease; }
 @keyframes fadein { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
+/* ---------- Formule brunch (café) ---------- */
+.brunch {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--sable);
+  border-radius: 6px;
+  padding: 2rem 2.2rem 1.4rem;
+}
+.brunch-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  padding-bottom: 1.1rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid #d8d9c4;
+}
+.brunch h3, .brunch h4 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--encre);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.brunch h3::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--terracotta);
+  flex-shrink: 0;
+}
+.brunch-quand { font-style: italic; font-size: 0.95rem; color: var(--bleu-doux); margin-top: 0.2rem; padding-left: calc(8px + 0.55rem); }
+.brunch-prix { font-size: 1.6rem; font-weight: 500; color: var(--bleu); line-height: 1.2; white-space: nowrap; }
+
+.brunch-etapes { list-style: none; counter-reset: etape; margin-bottom: 1rem; }
+.brunch-etapes > li {
+  counter-increment: etape;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0 0.9rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed #d4d6bd;
+}
+.brunch-etapes > li:last-child { border-bottom: none; }
+.brunch-etapes > li::before {
+  content: counter(etape);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--terracotta);
+  color: var(--terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.brunch-choix { font-weight: 500; color: var(--encre); padding-top: 0.2rem; }
+.brunch-opt { font-weight: 400; color: var(--bleu-doux); white-space: nowrap; }
+.brunch .price { color: var(--bleu); font-weight: 500; }
+.brunch-opt .price { color: var(--bleu-doux); }
+.brunch-lait { font-size: 0.82rem; color: var(--bleu-doux); margin-top: 0.25rem; }
+
+/* Exemples de boissons : liste lisible par défaut ; mot qui défile si le JS l'active */
+.ex { margin-top: 0.2rem; font-size: 1.08rem; }
+.ex-label { font-size: 0.8rem; color: var(--bleu-doux); margin-right: 0.3em; }
+.ex-defile { display: inline; list-style: none; font-style: italic; font-weight: 400; font-size: 0.88em; color: var(--terracotta); }
+.ex-defile li { display: inline; }
+.ex-defile li:not(:last-child)::after { content: ', '; }
+.ex.ex--anim { display: flex; flex-wrap: wrap; align-items: center; column-gap: 0.3em; }
+.ex--anim .ex-label { margin-right: 0; }
+.ex-defile.is-rotating { display: block; position: relative; font-size: 1em; flex: 1 1 12.5rem; height: 1.7em; overflow: hidden; }
+.ex-defile.is-rotating li {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  line-height: 1.7em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transform: translateY(55%);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.ex-defile.is-rotating li::after { content: none; }
+.ex-defile.is-rotating li.is-on { opacity: 1; transform: none; }
+.ex-defile.is-rotating li.is-out { opacity: 0; transform: translateY(-55%); }
+
+.brunch-bas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; border-top: 1px solid #d8d9c4; padding-top: 1.1rem; }
+.brunch-bas h4 { margin-bottom: 0.2rem; }
+.brunch-bas .menu-item { border-bottom-color: #d4d6bd; padding: 0.55rem 0; }
+
+@media (max-width: 768px) {
+  .brunch { padding: 1.5rem 1.2rem 1rem; }
+  .brunch-bas { grid-template-columns: 1fr; }
+  .brunch-bas > div + div { margin-top: 0.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ex-defile.is-rotating li { transition: none; }
+}
+
 /* ---------- Sélecteur de langues ---------- */
 .langs { display: flex; gap: 0.15rem; align-items: center; }
 .langs a {

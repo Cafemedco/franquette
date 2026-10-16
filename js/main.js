@@ -84,3 +84,26 @@ document.querySelectorAll('.carte-tabs').forEach((tabs) => {
     scope.querySelectorAll('.carte-pane').forEach((p) => p.classList.toggle('hidden-pane', p.dataset.pane !== b.dataset.carte));
   });
 });
+
+// Formule brunch : les exemples de boissons défilent un par un (fondu + léger glissement vers le haut).
+// Sans JS ou avec « mouvement réduit » : la liste reste affichée en entier, sans animation.
+document.querySelectorAll('.ex-defile').forEach((ul) => {
+  const items = [...ul.children];
+  if (items.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  ul.parentElement.classList.add('ex--anim');
+  ul.classList.add('is-rotating');
+  let i = 0;
+  let paused = false;
+  items[0].classList.add('is-on');
+  ul.addEventListener('mouseenter', () => { paused = true; });
+  ul.addEventListener('mouseleave', () => { paused = false; });
+  setInterval(() => {
+    if (paused || document.hidden || !ul.offsetParent) return;
+    const prev = items[i];
+    i = (i + 1) % items.length;
+    prev.classList.replace('is-on', 'is-out');
+    items[i].classList.remove('is-out');
+    items[i].classList.add('is-on');
+    setTimeout(() => prev.classList.remove('is-out'), 650);
+  }, 2200);
+});

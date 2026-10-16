@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="stylesheet" href="../css/style.css?v=17">
+  <link rel="stylesheet" href="../css/style.css?v=18">
 </head>
 <body class="theme-cafe">
 
@@ -187,19 +187,52 @@
       </div>
     </div>
     <div class="carte-pane hidden-pane" data-pane="brunch">
-      <div class="carte-grid">
-        <div class="carte-col">
-          <h3>Weekend brunch</h3>
-          <div class="menu-item"><span class="name">Brunch set menu <span class="desc">— a hot drink, fresh juice of the day or homemade iced tea, caponata or a granola bowl, avocado toast (or ravioles +&euro;2.00)</span></span><span class="price">&euro;22.90</span></div>
-          <div class="menu-item"><span class="name">Mimosa on its own</span><span class="price">&euro;8.00</span></div>
+      <div class="brunch">
+        <div class="brunch-top">
+          <div>
+            <h3>Brunch set menu</h3>
+            <p class="brunch-quand">at the weekend</p>
+          </div>
+          <span class="price brunch-prix">&euro;22.90</span>
         </div>
-        <div class="carte-col">
-          <h3>Extras</h3>
-          <div class="menu-item"><span class="name">Smoked trout</span><span class="price">+&euro;2.00</span></div>
-          <div class="menu-item"><span class="name">Mimosa</span><span class="price">+&euro;2.00</span></div>
+        <ol class="brunch-etapes">
+          <li>
+            <div>
+              <p class="brunch-choix">A hot drink</p>
+              <div class="ex">
+                <span class="ex-label">For example:</span>
+                <ul class="ex-defile" aria-label="For example">
+                <li>oat latte</li>
+                <li>coconut matcha latte</li>
+                <li>almond chai latte</li>
+                <li>ube latte</li>
+                <li>cappuccino</li>
+                <li>flat white</li>
+                <li>mocha</li>
+                <li>hot chocolate</li>
+                <li>batch brew</li>
+                <li>fresh mint tea</li>
+                </ul>
+              </div>
+              <p class="brunch-lait">Your choice of milk included: cow&rsquo;s, oat, almond, soy or coconut</p>
+            </div>
+          </li>
+          <li><div><p class="brunch-choix">Fresh juice of the day or homemade iced tea</p></div></li>
+          <li><div><p class="brunch-choix">Caponata or granola bowl</p></div></li>
+          <li><div><p class="brunch-choix">Avocado toast <span class="brunch-opt">or ravioles <span class="price">+&euro;2.00</span></span></p></div></li>
+        </ol>
+        <div class="brunch-bas">
+          <div>
+            <h4>Extras</h4>
+            <div class="menu-item"><span class="name">Smoked trout</span><span class="price">+&euro;2.00</span></div>
+            <div class="menu-item"><span class="name">Mimosa</span><span class="price">+&euro;2.00</span></div>
+          </div>
+          <div>
+            <h4>Also</h4>
+            <div class="menu-item"><span class="name">Mimosa on its own</span><span class="price">&euro;8.00</span></div>
+          </div>
         </div>
       </div>
-      <p class="carte-note">Plant-based milk included in the set menu</p>
     </div>
   </div>
 </section>
@@ -239,7 +272,7 @@
   <p class="legal">&copy; 2026 Franquette &middot; 8 rue des Dames, 75017 Paris &middot; <a href="../mentions-legales.html">Legal notice</a> &middot; <a class="admin-link" href="../admin/">Admin</a></p>
 </footer>
 
-<script src="../js/main.js?v=5"></script>
+<script src="../js/main.js?v=6"></script>
 <script src="../js/app-data.js?v=9"></script>
 </body>
 </html>
