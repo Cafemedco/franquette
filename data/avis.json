@@ -2,9 +2,15 @@
   "source": "Uniiti",
   "source_url": "https://uniiti.com/shop/franquette",
   "note_moyenne": 4.9,
-  "nombre_avis": 1200,
-  "mis_a_jour": "2026-10-08T23:32:55Z",
+  "nombre_avis": 1201,
+  "mis_a_jour": "2026-10-21T07:46:13Z",
   "avis": [
+    {
+      "note": 5,
+      "texte": "Délicieux !",
+      "auteur": "Florence P.",
+      "date": "2026-10-21"
+    },
     {
       "note": 5,
       "texte": "Tout le monde il est beau tout le monde il est gentil ! Bravo très bonne cuisine très bon accueil très bonne ambiance",
@@ -88,12 +94,6 @@
       "texte": "Repas délicieux, cadre super sympa et gentillesse de Philippe... que demander de plus ?",
       "auteur": "Deborah B.",
       "date": "2026-06-04"
-    },
-    {
-      "note": 5,
-      "texte": "The food was so good it nearly made me cry. Philippe is the sweetest man and you can trust him 100% to choose the wine. May the culinary gods preserve this place",
-      "auteur": "Ke T.",
-      "date": "2026-05-29"
     }
   ]
 }
