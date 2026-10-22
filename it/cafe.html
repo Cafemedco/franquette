@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="stylesheet" href="../css/style.css?v=19">
+  <link rel="stylesheet" href="../css/style.css?v=20">
 </head>
 <body class="theme-cafe">
 
@@ -138,62 +138,70 @@
       </div>
     </div>
     <div class="carte-pane hidden-pane" data-pane="douceurs">
-      <div class="carte-grid carte-grid--masonry">
+      <div class="carte-grid">
         <div class="carte-col">
-          <h3 style="display:flex;justify-content:space-between;align-items:baseline;">Cookies <span class="price">3,50&nbsp;€</span></h3>
-          <div class="menu-item"><span class="name">Matcha e cioccolato bianco</span></div>
-          <div class="menu-item"><span class="name">Sesamo e cioccolato</span></div>
-          <div class="menu-item"><span class="name">Miso</span></div>
-          <div class="menu-item"><span class="name">Burro di arachidi</span></div>
-          <div class="menu-item"><span class="name">Brookie</span></div>
-        </div>
-        <div class="carte-col">
-          <h3 style="display:flex;justify-content:space-between;align-items:baseline;">Torte, alla fetta <span class="price">2,80&nbsp;€</span></h3>
-          <div class="menu-item"><span class="name">Marmorizzata vaniglia</span></div>
-          <div class="menu-item"><span class="name">Limone</span></div>
-          <div class="menu-item"><span class="name">Mandorle e nocciole</span></div>
-        </div>
-        <div class="carte-col">
-          <h3 style="display:flex;justify-content:space-between;align-items:baseline;">Torte fatte in casa, a fetta <span class="price">3,50&nbsp;€</span></h3>
-          <div class="menu-item"><span class="name">Arancia candita e cioccolato fondente</span></div>
-          <div class="menu-item"><span class="name">Mela-pera, cannella, noci e mandorle</span></div>
-        </div>
-        <div class="carte-col">
-          <h3>Brownies</h3>
-          <div class="menu-item"><span class="name">Brownie alle noci pecan, a fetta <span class="desc">— cioccolato fondente, burro semisalato, noci pecan</span></span><span class="price">3,00&nbsp;€</span></div>
-          <div class="menu-item"><span class="name">Mini brownie al cioccolato bianco</span><span class="price">2,10&nbsp;€</span></div>
-        </div>
-        <div class="carte-col">
-          <h3>Pasticceria</h3>
-          <div class="menu-item"><span class="name">Cheesecake, a fetta <span class="desc">— cocco, speculoos, lampone</span></span><span class="price">6,00&nbsp;€</span></div>
+          <h3>Merenda</h3>
+          <p class="carte-lead">Secondo disponibilità, da vedere in vetrina</p>
+          <div class="menu-item"><span class="name">Mini cake</span><span class="price">2,80&nbsp;€</span></div>
+          <div class="menu-item"><span class="name">Brownie alle noci pecan</span><span class="price">3,00&nbsp;€</span></div>
+          <div class="menu-item"><span class="name">Torte fatte in casa, a fetta</span><span class="price">3,50&nbsp;€</span></div>
+          <div class="menu-item"><span class="name">Cookie</span><span class="price">3,50&nbsp;€</span></div>
         </div>
       </div>
     </div>
     <div class="carte-pane hidden-pane" data-pane="pdj">
       <div class="carte-grid">
         <div class="carte-col">
-          <h3>Dolce</h3>
-          <div class="menu-item"><span class="name">Granola bowl fatta in casa <span class="desc">— pera e fichi caramellati, miele di caffè</span></span><span class="price">7,50&nbsp;€</span></div>
-          <div class="menu-item"><span class="name">Tartine burro e marmellata <span class="desc">— confetture Papilles Sauvages</span></span><span class="price">4,50&nbsp;€</span></div>
+          <h3>Colazione</h3>
+          <div class="menu-item"><span class="name">Tartine burro e marmellata <span class="desc">— confetture bio a scelta: rosa canina, fico, mela cotogna o albicocca</span><span class="en-formule">in formula 11,90&nbsp;€</span></span><span class="price">4,50&nbsp;€</span></div>
+          <div class="menu-item"><span class="name">Uovo alla coque, sale al caffè <span class="desc">— 2 uova freschissime, bastoncini di pane baltico imburrati, un pizzico di fleur de sel al caffè del Kenya</span><span class="en-formule">in formula 13,90&nbsp;€</span></span><span class="price">6,50&nbsp;€</span></div>
+          <div class="menu-item"><span class="name">Granola bowl di stagione <span class="desc">— yogurt greco, frutta di stagione, granola fatta in casa (avena, noci pecan, nocciole, semi di zucca, acero), miele</span><span class="en-formule">in formula 14,90&nbsp;€</span></span><span class="price">7,50&nbsp;€</span></div>
+        </div>
+        <div class="carte-col">
+          <div class="brunch formule">
+            <div class="brunch-top">
+              <div>
+                <h3>Formula colazione</h3>
+                <p class="brunch-quand">tutta la settimana, fino alle 11:30, solo al tavolo</p>
+              </div>
+            </div>
+            <ol class="brunch-etapes">
+              <li><div><p class="brunch-choix">Una bevanda calda a scelta</p></div></li>
+              <li><div><p class="brunch-choix">Succo fresco del giorno o tè freddo della casa</p></div></li>
+              <li><div><p class="brunch-choix">Una colazione a scelta</p></div></li>
+            </ol>
+            <div class="formule-prix">
+              <div class="menu-item"><span class="name">con le tartine burro e marmellata</span><span class="price">11,90&nbsp;€</span></div>
+              <div class="menu-item"><span class="name">con l&rsquo;uovo alla coque, sale al caffè</span><span class="price">13,90&nbsp;€</span></div>
+              <div class="menu-item"><span class="name">con la granola bowl di stagione</span><span class="price">14,90&nbsp;€</span></div>
+            </div>
+            <div class="menu-item formule-grand"><span class="name"><strong>La grande colazione</strong> · due colazioni a scelta</span><span class="price">18,90&nbsp;€</span></div>
+            <p class="formule-note">Nelle nostre formule: tutte le bevande calde e il latte vegetale senza supplemento.</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="carte-pane hidden-pane" data-pane="dej">
-      <div class="carte-grid">
-        <div class="carte-col">
-          <h3>I nostri ravioles</h3>
-          <div class="menu-item"><span class="name">Ravioles allo zafferano <span class="desc">— gratinati, crema allo zafferano, parmigiano</span></span><span class="price">12,50&nbsp;€</span></div>
-          <div class="menu-item"><span class="name">Ravioles al basilico <span class="desc">— olio al basilico, noci tostate, parmigiano, rucola, limone</span></span><span class="price">12,50&nbsp;€</span></div>
-          <div class="menu-item"><span class="name">Ravioles con vitello sfilacciato <span class="desc">— gratinati, vitello sfilacciato, sugo di pomodoro alla &rsquo;nduja, parmigiano</span></span><span class="price">13,50&nbsp;€</span></div>
+      <div class="carte-grid carte-grid--dej">
+        <div class="carte-col dej-partager">
+          <h3>Da condividere</h3>
+          <div class="menu-item"><span class="name">Caponata siciliana <span class="tag-vege">vegetariano</span> <span class="desc">— melanzane, cipolle, pomodori, sedano, pinoli, capperi, uvetta, feta DOP, olio d&rsquo;oliva Revoliva</span></span><span class="price">8,90&nbsp;€</span></div>
         </div>
-        <div class="carte-col">
-          <h3>E anche</h3>
-          <div class="menu-item"><span class="name">Caponata siciliana <span class="desc">— melanzane, cipolle, pomodori, sedano, pinoli, capperi, uvetta, feta DOP</span></span><span class="price">13,00&nbsp;€</span></div>
+        <div class="carte-col dej-ravioles">
+          <h3>Ravioles</h3>
+          <div class="menu-item"><span class="name">Zafferano <span class="tag-vege">vegetariano</span> <span class="desc">— gratinati, crema allo zafferano, parmigiano</span></span><span class="price">12,50&nbsp;€</span></div>
+          <div class="menu-item"><span class="name">Verdi <span class="tag-vege">vegetariano</span> <span class="desc">— basilico, noci tostate, lime, olio d&rsquo;oliva Revoliva</span></span><span class="price">13,00&nbsp;€</span></div>
+          <div class="menu-item"><span class="name">Rossi <span class="desc">— gratinati, sugo di pomodoro alla &rsquo;nduja, vitello sfilacciato, parmigiano</span></span><span class="price">13,50&nbsp;€</span></div>
+          <p class="carte-lead carte-lead--bas">Tutti i nostri ravioles sono serviti con un&rsquo;insalata.</p>
         </div>
-        <div class="carte-col">
+        <div class="carte-formule dej-formule">
+          <p class="carte-formule-titre">Formula pranzo</p>
+          <p class="carte-formule-ligne"><span>Ravioles a scelta + tiramisù fatto in casa</span><span class="price">16,90&nbsp;€</span></p>
+        </div>
+        <div class="carte-col dej-desserts">
           <h3>Dessert</h3>
-          <div class="menu-item"><span class="name">Tiramisù V60</span><span class="price">6,00&nbsp;€</span></div>
-          <div class="menu-item"><span class="name">Crème brûlée ai fiori d&rsquo;arancio</span><span class="price">6,50&nbsp;€</span></div>
+          <div class="menu-item"><span class="name">Tiramisù fatto in casa <span class="desc">— caffè specialty (Guatemala anaerobico), cacao Barry</span></span><span class="price">6,00&nbsp;€</span></div>
+          <div class="menu-item"><span class="name">Crème brûlée <span class="desc">— arancia candita, caramellata al momento</span></span><span class="price">6,50&nbsp;€</span></div>
         </div>
       </div>
     </div>
@@ -204,12 +212,12 @@
             <h3>Formula brunch</h3>
             <p class="brunch-quand">nel weekend</p>
           </div>
-          <span class="price brunch-prix">22,90&nbsp;€</span>
+          <span class="price brunch-prix">24,90&nbsp;€</span>
         </div>
         <ol class="brunch-etapes">
           <li>
             <div>
-              <p class="brunch-choix">Una bevanda calda</p>
+              <p class="brunch-choix">Una bevanda calda a scelta</p>
               <div class="ex">
                 <span class="ex-label">Per esempio:</span>
                 <ul class="ex-defile" aria-label="Per esempio">
@@ -228,21 +236,11 @@
               <p class="brunch-lait">Latte a scelta incluso: vaccino, avena, mandorla, soia o cocco</p>
             </div>
           </li>
-          <li><div><p class="brunch-choix">Succo fresco del giorno o tè freddo della casa</p></div></li>
-          <li><div><p class="brunch-choix">Caponata o granola bowl</p></div></li>
-          <li><div><p class="brunch-choix">Toast all&rsquo;avocado <span class="brunch-opt">o ravioles <span class="price">+2,00&nbsp;€</span></span></p></div></li>
+          <li><div><p class="brunch-choix">Succo fresco del giorno, tè freddo della casa o un mimosa <span class="brunch-detail">(vouvray e spremuta d&rsquo;arancia)</span></p></div></li>
+          <li><div><p class="brunch-choix">Tartine burro e marmellata, uova alla coque, una granola bowl di stagione o una caponata siciliana</p></div></li>
+          <li><div><p class="brunch-choix">Un toast all&rsquo;avocado con trota affumicata o ravioles a scelta <span class="brunch-detail">(zafferano, verdi o rossi)</span></p><p class="brunch-lait">Toast all&rsquo;avocado: crema di avocado al caffè, feta, dukkah, trota affumicata.</p></div></li>
         </ol>
-        <div class="brunch-bas">
-          <div>
-            <h4>Supplementi</h4>
-            <div class="menu-item"><span class="name">Trota affumicata</span><span class="price">+2,00&nbsp;€</span></div>
-            <div class="menu-item"><span class="name">Mimosa</span><span class="price">+2,00&nbsp;€</span></div>
-          </div>
-          <div>
-            <h4>E anche</h4>
-            <div class="menu-item"><span class="name">Mimosa da solo</span><span class="price">8,00&nbsp;€</span></div>
-          </div>
-        </div>
+        <p class="formule-note">Nelle nostre formule: tutte le bevande calde e il latte vegetale senza supplemento.</p>
       </div>
     </div>
   </div>

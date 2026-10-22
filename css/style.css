@@ -825,10 +825,102 @@ footer .legal a { color: inherit; }
 .brunch-bas h4 { margin-bottom: 0.2rem; }
 .brunch-bas .menu-item { border-bottom-color: #d4d6bd; padding: 0.55rem 0; }
 
+.brunch-detail { font-weight: 400; color: var(--bleu-doux); }
+.formule-note {
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--bleu-doux);
+  border-top: 1px solid #d8d9c4;
+  padding-top: 0.9rem;
+}
+
+/* ---------- Carte à manger (café, 22/10/2026) ---------- */
+/* Petite ligne sous un titre de colonne (« Selon disponibilité… », « servies avec une salade ») */
+.carte-lead {
+  margin: -0.45rem 0 0.5rem calc(8px + 0.55rem);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--bleu-doux);
+}
+.carte-lead--bas { margin: 0.5rem 0 0; }
+/* Pastille « végé » */
+.tag-vege {
+  display: inline-block;
+  margin-left: 0.25rem;
+  padding: 0.12rem 0.45rem 0.05rem;
+  border: 1px solid var(--terracotta);
+  border-radius: 1rem;
+  font-size: 0.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: 0.12em;
+  color: var(--terracotta);
+}
+/* Prix en formule, sous un petit-déjeuner */
+.en-formule { display: block; margin-top: 0.15rem; font-size: 0.78rem; font-weight: 400; color: var(--terracotta); }
+/* Carte « Formule petit-déjeuner » (même habillage que le brunch) */
+.brunch.formule { padding: 1.6rem 1.6rem 1.1rem; }
+.formule .brunch-top { padding-bottom: 0.9rem; }
+.formule .brunch-top h3 { margin-bottom: 0; }
+.formule .brunch-etapes { margin-bottom: 0.4rem; }
+.formule-prix { border-top: 1px solid #d8d9c4; padding-top: 0.2rem; }
+.formule-prix .menu-item { padding: 0.55rem 0; border-bottom-color: #d4d6bd; }
+.formule-prix .name { font-weight: 400; }
+.menu-item.formule-grand {
+  margin: 0.7rem 0 1rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--creme);
+  border-radius: 4px;
+  border-bottom: none;
+}
+.formule-grand .name { font-weight: 400; }
+.formule-grand strong { font-weight: 500; color: var(--terracotta); }
+/* Onglet Déjeuner : à partager et desserts à gauche, ravioles à droite, formule en bas */
+.carte-grid--dej {
+  grid-template-areas: "partager ravioles" "desserts ravioles" "formule formule";
+  grid-template-rows: auto 1fr auto;
+}
+.dej-partager { grid-area: partager; }
+.dej-ravioles { grid-area: ravioles; }
+.dej-desserts { grid-area: desserts; }
+.dej-formule { grid-area: formule; }
+.carte-formule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.3rem 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 1.4rem;
+  background: var(--sable);
+  border-radius: 6px;
+}
+.carte-formule-titre {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--encre);
+}
+.carte-formule-ligne { display: flex; align-items: baseline; gap: 1.5rem; font-weight: 500; color: var(--encre); }
+.carte-formule .price { white-space: nowrap; font-weight: 500; color: var(--bleu); }
+
 @media (max-width: 768px) {
   .brunch { padding: 1.5rem 1.2rem 1rem; }
   .brunch-bas { grid-template-columns: 1fr; }
   .brunch-bas > div + div { margin-top: 0.8rem; }
+  .brunch.formule { padding: 1.4rem 1.1rem 1rem; }
+  .carte-grid--dej { grid-template-areas: none; grid-template-rows: none; }
+  .carte-grid--dej > * { grid-area: auto; }
+  .carte-formule { padding: 0.9rem 1.1rem; }
+  .carte-formule-ligne { width: 100%; justify-content: space-between; gap: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ex-defile.is-rotating li { transition: none; }
