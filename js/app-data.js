@@ -73,7 +73,7 @@
 
     // ---------- Rubriques en mode « à venir » (activables depuis /admin) ----------
     const R = site.rubriques || {};
-    const soonMsg = IS_EN ? (R.message_en || 'Opening soon') : (R.message_fr || 'Ouverture prochainement');
+    const soonMsg = R['message_' + LANG] || (IS_EN ? (R.message_en || 'Opening soon') : (R.message_fr || 'Ouverture prochainement'));
 
     const pageOff =
       (document.body.classList.contains('theme-boutique') && R.boutique === false) ||
@@ -219,6 +219,14 @@
       const p = produits.find((x) => x.id === id) || produits[0];
       if (!p) return;
       document.title = L(p, 'nom') + ' — Franquette';
+      const base = 'https://franquette-paris.fr/', q = 'produit.html?id=' + encodeURIComponent(p.id);
+      const pre = (l) => (l === 'fr' ? '' : l + '/');
+      const lien = (rel, href, hl) => { const k = document.createElement('link'); k.rel = rel; k.href = href; if (hl) k.hreflang = hl; document.head.appendChild(k); };
+      lien('canonical', base + pre(LANG) + q);
+      ['fr', 'en', 'de', 'nl', 'it'].forEach((l) => lien('alternate', base + pre(l) + q, l));
+      lien('alternate', base + q, 'x-default');
+      const md = document.querySelector('meta[name="description"]');
+      if (md && L(p, 'description')) md.content = L(p, 'description');
       document.querySelectorAll('.langs a[href]').forEach((a) => {
         a.href = a.getAttribute('href').split('?')[0] + '?id=' + encodeURIComponent(p.id);
       });
@@ -241,9 +249,10 @@
       const ld = {
         '@context': 'https://schema.org', '@type': 'Product',
         name: L(p, 'nom'), description: L(p, 'description'),
-        brand: { '@type': 'Brand', name: 'Franquette' }
+        brand: { '@type': 'Brand', name: 'Franquette' }, url: location.href.split('#')[0]
       };
-      if (p.prix != null) ld.offers = { '@type': 'Offer', price: p.prix, priceCurrency: 'EUR', availability: 'https://schema.org/InStock' };
+      if (p.image) ld.image = new URL(ROOT + '/' + p.image, location.href).href;
+      if (p.prix != null) ld.offers = { '@type': 'Offer', price: p.prix, priceCurrency: 'EUR', availability: p.dispo === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock' };
       const s = document.createElement('script');
       s.type = 'application/ld+json';
       s.textContent = JSON.stringify(ld);

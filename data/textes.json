@@ -11,8 +11,8 @@
   },
   "accueil.univers_intro": {
     "label": "Accueil — texte d'introduction",
-    "fr": "Franquette vit du matin au soir : café méditerranéen la journée, tapas à la française le soir, terre et céramique entre les deux.",
-    "en": "Franquette lives from morning to night: Mediterranean coffee by day, French tapas in the evening, clay and ceramics in between."
+    "fr": "Aux Batignolles, Franquette vit du matin au soir&nbsp;: café méditerranéen la journée, assiettes à partager le soir, terre et céramique entre les deux.",
+    "en": "In Batignolles, Franquette lives from morning to night: Mediterranean coffee by day, sharing plates in the evening, clay and ceramics in between."
   },
   "accueil.carte_cafe_titre": {
     "label": "Accueil — carte cafe : titre",
@@ -31,11 +31,11 @@
   },
   "accueil.carte_restaurant_desc": {
     "label": "Accueil — carte restaurant : description",
-    "fr": "Tapas à la française &amp; vins nature<br>Mardi&ndash;samedi &agrave; partir de 19h30",
-    "en": "French tapas &amp; natural wines<br>Tuesday&ndash;Saturday from 7:30pm",
-    "de": "Französische Tapas &amp; Naturweine<br>Di&ndash;Sa ab 19:30 Uhr",
-    "nl": "Franse tapas &amp; natuurwijn<br>Di&ndash;za vanaf 19:30 uur",
-    "it": "Tapas alla francese &amp; vini naturali<br>Mar&ndash;sab dalle 19:30"
+    "fr": "Assiettes à partager &amp; vins nature<br>Mardi&ndash;samedi &agrave; partir de 19h30",
+    "en": "Sharing plates &amp; natural wines<br>Tuesday&ndash;Saturday from 7:30pm",
+    "de": "Teller zum Teilen &amp; Naturweine<br>Di&ndash;Sa ab 19:30 Uhr",
+    "nl": "Borden om te delen &amp; natuurwijn<br>Di&ndash;za vanaf 19:30 uur",
+    "it": "Piatti da condividere &amp; vini naturali<br>Mar&ndash;sab dalle 19:30"
   },
   "accueil.carte_ateliers_titre": {
     "label": "Accueil — carte ateliers : titre",
@@ -72,8 +72,8 @@
   },
   "accueil.esprit_p2": {
     "label": "Accueil — esprit, 2e paragraphe",
-    "fr": "Le matin, l&rsquo;odeur du café fraîchement moulu. Le midi, une pause salée-sucrée au soleil. L&rsquo;après-midi, la terre qui tourne à l&rsquo;atelier. Le soir, les tapas cosmopolites et les vins nature. À la bonne franquette, toujours.",
-    "en": "In the morning, the smell of freshly ground coffee. At noon, a sweet-and-savoury break in the sun. In the afternoon, clay spinning at the workshop. In the evening, cosmopolitan tapas and natural wines. Always &ldquo;à la bonne franquette&rdquo;."
+    "fr": "Le matin, l&rsquo;odeur du café fraîchement moulu. Le midi, une pause salée-sucrée au soleil. L&rsquo;après-midi, la terre qui tourne à l&rsquo;atelier. Le soir, les assiettes cosmopolites à partager et les vins nature. À la bonne franquette, toujours.",
+    "en": "In the morning, the smell of freshly ground coffee. At noon, a sweet-and-savoury break in the sun. In the afternoon, clay spinning at the workshop. In the evening, cosmopolitan sharing plates and natural wines. Always &ldquo;à la bonne franquette&rdquo;."
   },
   "cafe.tagline": {
     "label": "Café — sous-titre de la photo",
@@ -116,11 +116,11 @@
   },
   "restaurant.presentation_p1": {
     "label": "Restaurant — présentation, 1er paragraphe",
-    "fr": "Dans une ancienne boutique de bonbons devenue cabinet de curiosités, à 100&nbsp;mètres de la place de Clichy, Franquette imagine des assiettes à partager aux accents cosmopolites&nbsp;: des produits <strong>bons, propres et justes</strong> dans la philosophie du Slow Food.",
-    "en": "In a former candy shop turned cabinet of curiosities, 100&nbsp;metres from Place de Clichy, Franquette creates cosmopolitan sharing plates: products that are <strong>good, clean and fair</strong>, in the spirit of Slow Food.",
-    "de": "In einem ehemaligen Süßwarenladen, der zum Kuriositätenkabinett wurde, 100&nbsp;Meter vom Place de Clichy entfernt, kreiert Franquette Teller zum Teilen mit kosmopolitischem Akzent: <strong>gute, saubere und faire</strong> Produkte, ganz im Geiste von Slow Food.",
-    "nl": "In een voormalige snoepwinkel die een rariteitenkabinet werd, 100&nbsp;meter van de Place de Clichy, bedenkt Franquette deelborden met kosmopolitische accenten: <strong>goede, zuivere en eerlijke</strong> producten, in de geest van Slow Food.",
-    "it": "In un&rsquo;ex bottega di caramelle diventata gabinetto delle curiosità, a 100&nbsp;metri da Place de Clichy, Franquette immagina piatti da condividere dagli accenti cosmopoliti: prodotti <strong>buoni, puliti e giusti</strong>, nello spirito dello Slow Food."
+    "fr": "Aux Batignolles, dans une ancienne boutique de bonbons devenue cabinet de curiosités, à 100&nbsp;mètres de la place de Clichy, Franquette imagine des assiettes à partager aux accents cosmopolites&nbsp;: des produits <strong>bons, propres et justes</strong> dans la philosophie du Slow Food.",
+    "en": "In a former Batignolles candy shop turned cabinet of curiosities, 100&nbsp;metres from Place de Clichy, Franquette creates cosmopolitan sharing plates: products that are <strong>good, clean and fair</strong>, in the spirit of Slow Food.",
+    "de": "In Batignolles, in einem ehemaligen Süßwarenladen, der zum Kuriositätenkabinett wurde, 100&nbsp;Meter vom Place de Clichy entfernt, kreiert Franquette Teller zum Teilen mit kosmopolitischem Akzent: <strong>gute, saubere und faire</strong> Produkte, ganz im Geiste von Slow Food.",
+    "nl": "In Batignolles, in een voormalige snoepwinkel die een rariteitenkabinet werd, 100&nbsp;meter van de Place de Clichy, bedenkt Franquette deelborden met kosmopolitische accenten: <strong>goede, zuivere en eerlijke</strong> producten, in de geest van Slow Food.",
+    "it": "A Batignolles, in un&rsquo;ex bottega di caramelle diventata gabinetto delle curiosità, a 100&nbsp;metri da Place de Clichy, Franquette immagina piatti da condividere dagli accenti cosmopoliti: prodotti <strong>buoni, puliti e giusti</strong>, nello spirito dello Slow Food."
   },
   "restaurant.presentation_p2": {
     "label": "Restaurant — présentation, 2e paragraphe",
@@ -132,8 +132,8 @@
   },
   "ateliers.tagline": {
     "label": "Ateliers — sous-titre de la photo",
-    "fr": "Mettre les mains dans la terre, rue des Dames",
-    "en": "Get your hands in the clay, rue des Dames"
+    "fr": "Mettre les mains dans la terre, rue des Dames aux Batignolles",
+    "en": "Get your hands in the clay on rue des Dames, Batignolles"
   },
   "ateliers.presentation_titre": {
     "label": "Ateliers — titre de présentation",
@@ -152,13 +152,13 @@
   },
   "ateliers.presentation_p3": {
     "label": "Ateliers — présentation, 3e paragraphe (en pratique)",
-    "fr": "<strong>En pratique&nbsp;:",
-    "en": "<strong>In practice:"
+    "fr": "<strong>En pratique&nbsp;:</strong> un dimanche sur deux, séances de 2&nbsp;heures animées par Marie, en petit groupe. Premiers ateliers en novembre 2026 — les places partiront vite.",
+    "en": "<strong>In practice:</strong> every other Sunday, 2-hour sessions led by Marie, in small groups. First workshops in November 2026 — places will go fast."
   },
   "ateliers.reservation_note": {
     "label": "Ateliers — encadré « comment réserver »",
-    "fr": "Pour l&rsquo;instant, les réservations d&rsquo;ateliers se font simplement par e-mail à <a class=\"email-fixe\" href=\"mailto:cafemedco@gmail.com\">cafemedco@gmail.com",
-    "en": "For now, workshop bookings are made simply by email at <a class=\"email-fixe\" href=\"mailto:cafemedco@gmail.com\">cafemedco@gmail.com"
+    "fr": "Pour l&rsquo;instant, les réservations d&rsquo;ateliers se font simplement par e-mail à <a class=\"email-fixe\" href=\"mailto:cafemedco@gmail.com\">cafemedco@gmail.com</a> — indiquez vos disponibilités et le nombre de participants, on vous répond vite. La réservation en ligne arrive bientôt&nbsp;!",
+    "en": "For now, workshop bookings are made simply by email at <a class=\"email-fixe\" href=\"mailto:cafemedco@gmail.com\">cafemedco@gmail.com</a> — tell us your availability and number of participants, we&rsquo;ll reply quickly. Online booking is coming soon!"
   },
   "boutique.tagline": {
     "label": "Boutique — sous-titre de la photo",
@@ -167,11 +167,11 @@
   },
   "boutique.intro_titre": {
     "label": "Boutique — titre d'introduction",
-    "fr": "Venez découvrir notre sélection",
-    "en": "Come discover our selection",
-    "de": "Entdecken Sie unsere Auswahl",
-    "nl": "Kom onze selectie ontdekken",
-    "it": "Vieni a scoprire la nostra selezione"
+    "fr": "Venez découvrir notre sélection aux Batignolles",
+    "en": "Come discover our selection in Batignolles",
+    "de": "Entdecken Sie unsere Auswahl in Batignolles",
+    "nl": "Kom onze selectie ontdekken in Batignolles",
+    "it": "Vieni a scoprire la nostra selezione a Batignolles"
   },
   "boutique.intro": {
     "label": "Boutique — texte d'introduction",

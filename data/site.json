@@ -32,6 +32,9 @@
     "boutique": true,
     "ateliers": false,
     "message_fr": "Ouverture en novembre",
-    "message_en": "Opening in November"
+    "message_en": "Opening in November",
+    "message_de": "Eröffnung im November",
+    "message_nl": "Opening in november",
+    "message_it": "Apertura a novembre"
   }
 }
