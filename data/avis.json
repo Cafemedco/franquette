@@ -2,9 +2,21 @@
   "source": "Uniiti",
   "source_url": "https://uniiti.com/shop/franquette",
   "note_moyenne": 4.9,
-  "nombre_avis": 1201,
-  "mis_a_jour": "2026-10-21T07:46:13Z",
+  "nombre_avis": 1204,
+  "mis_a_jour": "2026-11-04T18:02:28Z",
   "avis": [
+    {
+      "note": 5,
+      "texte": "Ambiance, plats et vins : tout était parfait , merci",
+      "auteur": "Jonas C.",
+      "date": "2026-11-04"
+    },
+    {
+      "note": 5,
+      "texte": "C'était bien passé. L'ambience est top, et le patron est vraiment chalereux. J'aime bien la recette avec des raisins, personnellement.",
+      "auteur": "Hoang L.",
+      "date": "2026-11-04"
+    },
     {
       "note": 5,
       "texte": "Délicieux !",
@@ -82,18 +94,6 @@
       "texte": "délicieux, accueil extra, je recommande à 1000%!",
       "auteur": "Julie D.",
       "date": "2026-06-18"
-    },
-    {
-      "note": 5,
-      "texte": "Plats et accueil toujours au top",
-      "auteur": "Thomas B.",
-      "date": "2026-06-17"
-    },
-    {
-      "note": 5,
-      "texte": "Repas délicieux, cadre super sympa et gentillesse de Philippe... que demander de plus ?",
-      "auteur": "Deborah B.",
-      "date": "2026-06-04"
     }
   ]
 }
