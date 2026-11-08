@@ -2,9 +2,15 @@
   "source": "Uniiti",
   "source_url": "https://uniiti.com/shop/franquette",
   "note_moyenne": 4.9,
-  "nombre_avis": 1205,
-  "mis_a_jour": "2026-11-05T22:04:40Z",
+  "nombre_avis": 1206,
+  "mis_a_jour": "2026-11-08T20:32:57Z",
   "avis": [
+    {
+      "note": 5,
+      "texte": "Den persönlichen Service und das leckere Essen!",
+      "auteur": "Antonia B.",
+      "date": "2026-11-08"
+    },
     {
       "note": 5,
       "texte": "Ambiance, plats et vins : tout était parfait , merci",
@@ -88,12 +94,6 @@
       "texte": "Très bel accueil, menus à partager très bons mais le restaurant n'est ni climatisé, ni ventilé et nous y avons mangé en pleine canicule",
       "auteur": "Nadine F.",
       "date": "2026-06-25"
-    },
-    {
-      "note": 5,
-      "texte": "délicieux, accueil extra, je recommande à 1000%!",
-      "auteur": "Julie D.",
-      "date": "2026-06-18"
     }
   ]
 }
