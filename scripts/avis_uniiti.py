@@ -29,6 +29,9 @@ PAGE_AVIS = "https://uniiti.com/shop/franquette"
 API_AVIS = "https://uniiti.com/api/opinion-request/shop/load-more-ureview-reviews"
 SHOP_ID = 764                      # identifiant Uniiti de Franquette (fiche uniiti.com/shop/franquette)
 SORTIE = Path(__file__).resolve().parent.parent / "data" / "avis.json"
+# Avis retirés du site à la demande de leur auteur (ils restent sur Uniiti) :
+# [{"auteur": "Anne B.", "date": "2026-11-08"}] ; la date est facultative.
+EXCLUS = Path(__file__).resolve().parent.parent / "data" / "avis-exclus.json"
 NB_AVIS_AFFICHES = 15
 PAGES_MAX = 6                      # au plus 60 avis parcourus pour trouver 15 commentaires
 UA = "Mozilla/5.0 (site Franquette ; mise a jour des avis)"
@@ -116,13 +119,25 @@ def avis_fragment_uniiti(fragment):
     return avis
 
 
-def avis_recents():
+def charger_exclus():
+    if not EXCLUS.exists():
+        return []
+    return [e for e in json.loads(EXCLUS.read_text(encoding="utf-8")) if e.get("auteur")]
+
+
+def retirer_exclus(avis, exclus):
+    """Enlève les avis dont l'auteur a demandé le retrait du site."""
+    garde = lambda a: not any(a["auteur"] == e["auteur"] and e.get("date") in (None, "", a["date"]) for e in exclus)
+    return [a for a in avis if garde(a)]
+
+
+def avis_recents(exclus=()):
     avis, vus = [], set()
     for p in range(1, PAGES_MAX + 1):
         d = lire_api(p)
         if d.get("status") != "success":
             raise ValueError(f"page {p} : statut « {d.get('status')} »")
-        for a in avis_fragment_uniiti(d.get("html", "")):
+        for a in retirer_exclus(avis_fragment_uniiti(d.get("html", "")), exclus):
             cle = (a["auteur"], a["date"], a["texte"][:40])
             if cle not in vus:
                 vus.add(cle)
@@ -137,14 +152,15 @@ def avis_recents():
 def main():
     test = sys.argv[1] if len(sys.argv) > 1 else None
     try:
+        exclus = charger_exclus()
         page = lire_page(test)
         moyenne, nombre = note_globale(page)
         try:
-            avis = avis_fragment_uniiti(page) if test else avis_recents()
+            avis = retirer_exclus(avis_fragment_uniiti(page), exclus) if test else avis_recents(exclus)
         except Exception as e:                        # noqa: BLE001
             print(f"API Uniiti indisponible ({e}) : repli sur les avis de la fiche Uniiti.",
                   file=sys.stderr)
-            avis = avis_fragment_uniiti(page)
+            avis = retirer_exclus(avis_fragment_uniiti(page), exclus)
         if not avis:
             raise ValueError("aucun avis avec commentaire n'a pu être lu")
     except Exception as e:                            # noqa: BLE001 — on veut tout attraper

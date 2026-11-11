@@ -107,3 +107,18 @@ document.querySelectorAll('.ex-defile').forEach((ul) => {
     setTimeout(() => prev.classList.remove('is-out'), 650);
   }, 2200);
 });
+
+// Carte Google : rien n'est chargé chez Google tant que le visiteur ne clique pas sur « Afficher la carte »
+document.querySelectorAll('.maps-consent').forEach((box) => {
+  const btn = box.querySelector('.maps-load');
+  const src = box.getAttribute('data-maps-src') || '';
+  if (!btn || !/^https:\/\/www\.google\.com\/maps/.test(src)) return;
+  btn.addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.src = src;
+    frame.title = box.getAttribute('data-maps-title') || 'Google Maps';
+    frame.loading = 'lazy';
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    box.replaceWith(frame);
+  });
+});

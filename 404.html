@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
   <title>Page introuvable — Franquette</title>
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -13,6 +14,8 @@
     p { color:#8C7B6B; margin-bottom:2rem; }
     a { display:inline-block; padding:0.8rem 2.2rem; border:1px solid #4A3A2F; border-radius:2rem; color:#4A3A2F; text-decoration:none; font-size:0.85rem; letter-spacing:0.15em; text-transform:uppercase; }
     a:hover { background:#4A3A2F; color:#FBF6EE; }
+    a.legal-link { display:block; margin-top:2.5rem; padding:0; border:0; font-size:0.75rem; letter-spacing:0; text-transform:none; color:#8C7B6B; }
+    a.legal-link:hover { background:none; color:#4A3A2F; }
   </style>
 </head>
 <body>
@@ -20,6 +23,7 @@
     <h1>Oups.</h1>
     <p>Cette page n&rsquo;existe pas (ou plus). Mais la table est mise, rue des Dames.</p>
     <a href="/">Retour &agrave; l&rsquo;accueil</a>
+    <a class="legal-link" href="/mentions-legales.html">Mentions légales et confidentialité</a>
   </div>
 </body>
 </html>

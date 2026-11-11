@@ -27,7 +27,15 @@
   };
   const catLabel = (c) => { const o = CATEGORIES[c] || {}; return o[LANG] || o.en || o.fr || c; };
 
-  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  // Liens venant des fichiers de données : seulement https, mailto, tel ou un chemin du site (jamais « javascript: »)
+  const safeUrl = (u) => {
+    const v = String(u == null ? '' : u).trim();
+    const t = v.replace(/[\u0000-\u0020\u007F]/g, ''); // le navigateur ignore ces caractères : « java\tscript: » = « javascript: »
+    return /^(https?:\/\/|mailto:|tel:|#|\.{0,2}\/)/i.test(t) || (t && !/^[a-z][a-z0-9+.-]*:/i.test(t)) ? v : '#';
+  };
+  // Chemin d'image glissé dans url('…') : on neutralise guillemets, parenthèses et antislash
+  const cssUrl = (u) => String(u == null ? '' : u).replace(/['"()\\\s]/g, (c) => '%' + c.charCodeAt(0).toString(16).toUpperCase().padStart(2, '0'));
   const prixTxt = (p) => p == null
     ? UI.prix
     : (LANG === 'fr' ? p.toFixed(2).replace('.', ',') + ' €' : '€' + p.toFixed(2));
@@ -40,7 +48,7 @@
   // ---------- Infos pratiques (site.json) ----------
   getJSON('data/site.json').then((site) => {
     document.querySelectorAll('a[href^="tel:"]:not(.tel-fixe)').forEach((a) => {
-      a.href = site.contact.tel_href;
+      a.href = safeUrl(site.contact.tel_href);
       if (/\d/.test(a.textContent)) a.textContent = site.contact.telephone;
     });
     document.querySelectorAll('a[href^="mailto:"]:not(.email-fixe)').forEach((a) => {
@@ -49,8 +57,9 @@
       if (a.textContent.includes('@')) a.textContent = site.contact.email;
     });
     // Bons cadeaux avant la réservation : un lien de réservation Uniiti ne doit pas être réécrit en bon cadeau.
-    document.querySelectorAll('a[href*="uniiti.com"]:not(#avis-source)').forEach((a) => { a.href = site.liens.bons_cadeaux; });
+    document.querySelectorAll('a[href*="uniiti.com"]:not(#avis-source):not(.lien-fixe)').forEach((a) => { if (site.liens.bons_cadeaux) a.href = safeUrl(site.liens.bons_cadeaux); });
     document.querySelectorAll('a[href*="google.com/maps/reserve"]').forEach((a) => {
+      if (safeUrl(site.liens.reservation) === '#') return;
       const u = new URL(site.liens.reservation);
       if (/(^|\.)google\./.test(u.hostname)) u.searchParams.set('hl', LANG === 'fr' ? 'fr-FR' : LANG);
       a.href = u.href;
@@ -60,9 +69,9 @@
     document.querySelectorAll('a[href*="instagram.com"]').forEach((a) => {
       const cafe = /franquette_cafe/.test(a.getAttribute('href'));
       const url = (cafe ? site.liens.instagram_cafe : site.liens.instagram) || site.liens.instagram;
-      if (url) a.href = url;
+      if (url) a.href = safeUrl(url);
     });
-    document.querySelectorAll('a[href*="facebook.com"]').forEach((a) => { a.href = site.liens.facebook; });
+    document.querySelectorAll('a[href*="facebook.com"]').forEach((a) => { if (site.liens.facebook) a.href = safeUrl(site.liens.facebook); });
     document.querySelectorAll('[data-bind-html]').forEach((el) => {
       const lire = (chemin) => chemin.split('.').reduce((o, k) => (o ? o[k] : null), site);
       const chemin = el.getAttribute('data-bind-html');
@@ -87,7 +96,7 @@
       sec.innerHTML = '<div class="container" style="text-align:center;">' +
         '<h2 class="section-title">' + esc(soonMsg) + '</h2><hr class="divider">' +
         '<p class="section-sub">' + UI.peaufine + '</p>' +
-        '<p style="text-align:center;"><a class="btn dark" href="' + esc((site.liens && (site.liens.instagram_cafe || site.liens.instagram)) || '#') + '" target="_blank" rel="noopener">' +
+        '<p style="text-align:center;"><a class="btn dark" href="' + esc(safeUrl((site.liens && (site.liens.instagram_cafe || site.liens.instagram)) || '#')) + '" target="_blank" rel="noopener">' +
         UI.suivre + '</a></p></div>';
       const footer = document.querySelector('footer');
       footer.parentNode.insertBefore(sec, footer);
@@ -125,13 +134,13 @@
       const etoiles = document.getElementById('avis-etoiles');
       if (chiffre) chiffre.textContent = String(data.note_moyenne).replace('.', IS_EN ? '.' : ',') + '/5';
       if (count) count.textContent = data.nombre_avis;
-      if (source) source.href = data.source_url;
+      if (source && data.source_url) source.href = safeUrl(data.source_url);
       if (etoiles) etoiles.textContent = '★★★★★☆'.slice(0, Math.round(data.note_moyenne)) || '★★★★★';
       avisGrid.innerHTML = (data.avis || []).map((a) =>
         '<div class="avis-card"><div class="avis-etoiles">' + '★'.repeat(a.note) + '</div>' +
         '<p>&laquo;&nbsp;' + esc(L(a, 'texte')) + '&nbsp;&raquo;</p>' +
         '<p class="avis-auteur">' + esc(a.auteur) +
-        (a.date ? ' &middot; ' + esc(new Date(a.date).toLocaleDateString(LANG, { day: 'numeric', month: 'long', year: 'numeric' })) : '') +
+        (a.date ? ' &middot; ' + esc(new Date(a.date + 'T12:00:00').toLocaleDateString(LANG, { day: 'numeric', month: 'long', year: 'numeric' })) : '') +
         '</p></div>'
       ).join('');
     }).catch(() => {});
@@ -143,7 +152,7 @@
       ? '<img src="' + esc(ROOT + '/' + a.image) + '" alt="" loading="lazy">'
       : '';
     const lien = a.lien
-      ? '<a href="' + esc(a.lien) + '" target="_blank" rel="noopener">' + esc((LANG === 'fr' && a.lien_texte) || UI.lire) + ' →</a>'
+      ? '<a href="' + esc(safeUrl(a.lien)) + '" target="_blank" rel="noopener">' + esc((LANG === 'fr' && a.lien_texte) || UI.lire) + ' →</a>'
       : '';
     return '<article class="actu-card">' + img +
       '<div class="actu-body"><p class="actu-date">' + esc(dateTxt(a.date)) + '</p>' +
@@ -178,14 +187,14 @@
       let current = 'tous';
 
       const cardImg = (p) => p.image
-        ? 'style="background-image:url(\'' + esc(ROOT + '/' + p.image) + '\')"'
+        ? 'style="background-image:url(\'' + esc(cssUrl(ROOT + '/' + p.image)) + '\')"'
         : 'class="produit-visuel ' + (CATEGORIES[p.categorie] || {}).cls + '"';
 
       const render = () => {
         const list = produits.filter((p) => p.dispo !== false && (current === 'tous' || p.categorie === current));
         grid.innerHTML = list.map((p) =>
           '<a href="' + (IS_EN ? 'produit.html' : 'produit.html') + '?id=' + encodeURIComponent(p.id) + '" class="produit-card">' +
-          '<div class="produit-visuel" ' + (p.image ? 'style="background-image:url(\'' + esc(ROOT + '/' + p.image) + '\')"' : '') + '>' +
+          '<div class="produit-visuel" ' + (p.image ? 'style="background-image:url(\'' + esc(cssUrl(ROOT + '/' + p.image)) + '\')"' : '') + '>' +
           (p.image ? '' : '<span class="produit-visuel-badge ' + ((CATEGORIES[p.categorie] || {}).cls || '') + '"></span>') +
           '</div>' +
           '<div class="produit-body"><p class="produit-cat">' + esc(catLabel(p.categorie)) + '</p>' +
@@ -232,11 +241,11 @@
       });
 
       const achat = p.stripe
-        ? '<a href="' + esc(p.stripe) + '" class="btn solid" target="_blank" rel="noopener">' + UI.commander + '</a>'
+        ? '<a href="' + esc(safeUrl(p.stripe)) + '" class="btn solid" target="_blank" rel="noopener">' + UI.commander + '</a>'
         : '<button class="btn dark" disabled style="opacity:.5;cursor:not-allowed;">' + UI.bientot + '</button>';
 
       detail.innerHTML =
-        '<div class="produit-visuel produit-visuel-grand" ' + (p.image ? 'style="background-image:url(\'' + esc(ROOT + '/' + p.image) + '\')"' : '') + '>' +
+        '<div class="produit-visuel produit-visuel-grand" ' + (p.image ? 'style="background-image:url(\'' + esc(cssUrl(ROOT + '/' + p.image)) + '\')"' : '') + '>' +
         (p.image ? '' : '<span class="produit-visuel-badge ' + ((CATEGORIES[p.categorie] || {}).cls || '') + '"></span>') + '</div>' +
         '<div><p class="produit-cat">' + esc(catLabel(p.categorie)) + '</p>' +
         '<h1 class="produit-titre">' + esc(L(p, 'nom')) + '</h1>' +

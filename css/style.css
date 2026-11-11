@@ -978,3 +978,31 @@ hr.divider.rv-item { transform: scaleX(0); transform-origin: center; }
 .contact-band-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.8rem 3rem; }
 .contact-band-grid > div { flex: 0 1 auto; }
 .contact-band .email-fixe { white-space: nowrap; overflow-wrap: normal; font-size: .95rem; }
+
+/* ---------- Mentions légales et confidentialité ---------- */
+.legal-page { padding-top: 9rem; }
+.legal-page .container { max-width: 760px; }
+.legal-page h1 { font-size: 1.6rem; margin-bottom: 1.5rem; }
+.legal-page h2 { font-size: 1.1rem; margin: 2.2rem 0 0.6rem; scroll-margin-top: 7rem; }
+.legal-page p, .legal-page li { font-size: 0.92rem; line-height: 1.7; }
+.legal-page p + p { margin-top: 0.7rem; }
+.legal-page ul { margin: 0.6rem 0 0.8rem 1.2rem; }
+.legal-page li { margin-bottom: 0.45rem; }
+.legal-page a { color: var(--terracotta); overflow-wrap: anywhere; }
+.legal-page .legal-en { font-size: 0.85rem; background: var(--sable); border-radius: 8px; padding: 0.9rem 1.1rem; }
+
+/* ---------- Carte Google : chargée seulement au clic ---------- */
+.maps-consent {
+  min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.9rem; padding: 2rem 1.5rem; text-align: center; background: var(--sable); color: var(--bleu);
+}
+.maps-consent .maps-adresse { font-size: 1.05rem; font-weight: 500; }
+.maps-consent .maps-acces { font-size: 0.9rem; }
+.maps-consent .maps-note { font-size: 0.78rem; color: var(--bleu); opacity: 0.8; max-width: 480px; }
+.maps-consent .btn { cursor: pointer; font-family: inherit; background: transparent; }
+
+/* ---------- Petites mentions sous les cartes et les avis ---------- */
+.menu-legal { text-align: center; font-size: 0.8rem; line-height: 1.6; color: var(--bleu); margin-top: 2rem; }
+.menu-legal.tight { margin-top: 0.8rem; }
+.avis-info { text-align: center; font-size: 0.78rem; line-height: 1.6; color: var(--bleu); opacity: 0.85; max-width: 640px; margin: 2rem auto 0; }
+.avis-info a { color: inherit; }

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
   <title>Franquette · Caffetteria e ristorante, Batignolles, Parigi 17°</title>
   <meta name="description" content="Franquette, 8 rue des Dames a Batignolles (Parigi 17°): caffetteria di giorno, ristorante con piatti da condividere e vini naturali la sera.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,7 @@
   <meta property="og:image" content="https://franquette-paris.fr/img/accueil-vitrine.jpg">
   <meta property="og:url" content="https://franquette-paris.fr/it/">
   <meta property="og:locale" content="it_IT">
-  <link rel="stylesheet" href="../css/style.css?v=20">
+  <link rel="stylesheet" href="../css/style.css?v=21">
   <link rel="canonical" href="https://franquette-paris.fr/it/">
   <link rel="alternate" hreflang="fr" href="https://franquette-paris.fr/">
   <link rel="alternate" hreflang="en" href="https://franquette-paris.fr/en/">
@@ -239,9 +240,10 @@
     <div class="avis-note">
       <div class="chiffre" id="avis-chiffre">4.9/5</div>
       <div class="etoiles" id="avis-etoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="sous">Secondo le recensioni verificate Uniiti (<span id="avis-count">1195</span>&nbsp;recensioni) &middot; <a id="avis-source" href="https://uniiti.com/shop/franquette" target="_blank" rel="noopener">vedi tutte le recensioni</a></p>
+      <p class="sous">Valutazione del ristorante su Uniiti, su <span id="avis-count">1195</span>&nbsp;recensioni &middot; <a id="avis-source" href="https://uniiti.com/shop/franquette" target="_blank" rel="noopener">vedi tutte le recensioni</a></p>
     </div>
     <div class="avis-grid" id="avis-grid"></div>
+    <p class="avis-info">Fino a 15 recensioni recenti con commento, dalla più recente, qualunque sia il voto e senza modifiche. Raccolte da Uniiti; Franquette non le controlla. <a href="../mentions-legales.html#avis">Maggiori informazioni</a></p>
   </div>
 </section>
 
@@ -250,7 +252,12 @@
     <h2 class="section-title">Dove siamo</h2>
     <hr class="divider">
     <div class="maps-block">
-      <iframe src="https://www.google.com/maps?q=8+rue+des+Dames,+75017+Paris&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Franquette, 8 rue des Dames, Paris"></iframe>
+      <div class="maps-consent" data-maps-src="https://www.google.com/maps?q=8+rue+des+Dames,+75017+Paris&amp;output=embed" data-maps-title="Franquette, 8 rue des Dames, Paris">
+        <p class="maps-adresse">8 rue des Dames, 75017 Paris</p>
+        <p class="maps-acces">Metro La Fourche (linea 13) o Place de Clichy (linee 2 e 13)</p>
+        <button type="button" class="btn dark maps-load">Mostra la mappa</button>
+        <p class="maps-note">La mappa è fornita da Google Maps: visualizzandola, accetti che Google riceva il tuo indirizzo IP e possa installare cookie. <a href="../mentions-legales.html#cookies">Maggiori informazioni</a></p>
+      </div>
       <div class="maps-cta">
         <a href="https://www.google.com/maps/place/?q=place_id:ChIJY0g8FU1u5kcRt07KK3BHrF8" target="_blank" rel="noopener" class="btn dark">Apri in Google Maps</a>
       </div>
@@ -272,10 +279,10 @@
     <a href="https://www.instagram.com/franquette_paris/" target="_blank" rel="noopener">Instagram @franquette_paris</a>
     <a href="https://www.instagram.com/franquette_cafe/" target="_blank" rel="noopener">Instagram @franquette_cafe</a>
   </div>
-  <p class="legal">&copy; 2026 Franquette &middot; 8 rue des Dames, 75017 Paris &middot; <a href="../mentions-legales.html">Note legali</a> &middot; <a class="admin-link" href="../admin/">Admin</a></p>
+  <p class="legal">&copy; 2026 Franquette &middot; 8 rue des Dames, 75017 Paris &middot; <a href="../mentions-legales.html">Note legali e privacy</a> &middot; <a class="admin-link" href="../admin/">Admin</a></p>
 </footer>
 
-<script src="../js/main.js?v=6"></script>
-<script src="../js/app-data.js?v=10"></script>
+<script src="../js/main.js?v=7"></script>
+<script src="../js/app-data.js?v=11"></script>
 </body>
 </html>
