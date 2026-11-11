@@ -1006,3 +1006,24 @@ hr.divider.rv-item { transform: scaleX(0); transform-origin: center; }
 .menu-legal.tight { margin-top: 0.8rem; }
 .avis-info { text-align: center; font-size: 0.78rem; line-height: 1.6; color: var(--bleu); opacity: 0.85; max-width: 640px; margin: 2rem auto 0; }
 .avis-info a { color: inherit; }
+
+/* ---------- Pastille « New » des nouveautés de la carte (café) ---------- */
+.badge-new {
+  display: inline-block; position: relative; overflow: hidden;
+  margin: 0 0.3rem 0 0.45rem; padding: 0.2rem 0.6rem 0.16rem;
+  border-radius: 2rem; background: var(--terracotta); color: var(--creme);
+  font-size: 0.6rem; font-weight: 500; font-style: normal; line-height: 1.2;
+  letter-spacing: 0.16em; text-transform: uppercase; vertical-align: 0.18em;
+  box-shadow: 0 2px 8px rgba(42, 33, 26, 0.15);
+}
+.badge-new::after {
+  content: ''; position: absolute; top: 0; left: -60%; width: 45%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: badge-reflet 3.6s ease-in-out infinite;
+}
+@keyframes badge-reflet { 0%, 65% { left: -60%; } 100% { left: 130%; } }
+.chip.has-new::after {
+  content: ''; display: inline-block; width: 6px; height: 6px; margin-left: 0.45rem;
+  border-radius: 50%; background: var(--terracotta); vertical-align: 0.12em;
+}
+@media (prefers-reduced-motion: reduce) { .badge-new::after { display: none; } }
